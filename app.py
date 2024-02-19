@@ -22,6 +22,8 @@ def upload():
     response = client.recognize(config=config, audio=audio)
 
     # Process the response...
+    for result in response.results:
+        print(result.alternatives[0].transcript)
     # ...
 
     return '', 204
