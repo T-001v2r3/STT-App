@@ -10,12 +10,13 @@
     <button id="recordButton">Start Recording</button>
     <script src="main.js"></script>
 
+    <!-- for testing! maybe record now submit later policy enabled? maybe this can be a config idk-->
     <h2>Upload Audio</h2>
-    <form action="http://localhost:5000/upload" method="post" enctype="multipart/form-data">
+    <form action="http://34.134.1.128:5000/upload" method="post" enctype="multipart/form-data">
       Select audio to upload:
       <input type="file" name="audio" id="audio">
       <input type="submit" value="Upload Audio" name="submit">
     </form>
-    
+
 </body>
 </html>
