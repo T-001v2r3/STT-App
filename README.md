@@ -3,8 +3,12 @@
 - Root: https://34.134.1.128/
 - App: https://34.134.1.128/STT-App/
 
+# Stepbacks / issues needing fix asap:
+	- Need to fix file uploads for the cloud.
+	- Need to figure out the setup for google speech to text plugin outside of ipython.
+
 # Current State:
-These are the scripts beeing used right now.
+These scripts are beeing worked on:
 
 ## app_v2.py
 - BUG: not saving uploaded files on gcloud, localhost works fine.
@@ -23,6 +27,10 @@ These are the scripts beeing used right now.
 
 ## manual_file_to_speech_service.py
 - reads from a file and asks for gcloud speech to text service.
+- bad encoding for the file fetched from the browser? - ipython result:
+	- InvalidArgument: 400 Invalid recognition 'config': bad encoding..
+	- maybe this output can be prevented with a flag? check docs
+- can't run outside ipython? 
 - This is a WIP.
 
 # Db Scheme:
@@ -34,5 +42,7 @@ These are the scripts beeing used right now.
 - Alert metadata, in here goes the ML model results;
 
 # Dependencies (incomplete)
+- pip install flask
 - pip install python-dotenv
+- pip install psycopg2
 

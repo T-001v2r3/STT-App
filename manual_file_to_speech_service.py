@@ -33,7 +33,7 @@ def main():
     )
 
     audio = speech.RecognitionAudio()
-    with open("audio_manel.ogg", "rb") as audio_file:
+    with open("speech_brooklyn_bridge.flac", "rb") as audio_file:
         audio_data = audio_file.read()
 
     audio.content = audio_data
