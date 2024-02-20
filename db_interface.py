@@ -6,10 +6,11 @@ def create_connection():
     try:
         print("Attempting to connect to PostgreSQL database...")
         conn = psycopg2.connect(
-            host='34.175.73.86',
-            user='rita',
-            password='nopass',
-            dbname='test_db'
+            host='34.163.172.208',
+            port='5432',
+            user='postgres',
+            password='12345',
+            dbname='postgres'
         )
         if conn:
             print('Connected to PostgreSQL database')
@@ -43,7 +44,7 @@ def create_table(conn, table_name):
         """)
         print(f"Table {table_name} created successfully")
     except Error as e:
-        print(f"Error occurred while creating table {table_name}:", e)
+        print(f"Error ocurred while creating table {table_name}:", e)
 
 def main():
     conn = create_connection()
@@ -55,10 +56,11 @@ def main():
 
     print("Reconnecting to the new database...")
     conn = psycopg2.connect(
-        host='34.175.73.86',
-        user='rita',
-        password='nopass',
-        dbname='test_db'
+        host='34.163.172.208',
+        port='5432',
+        user='postgres',
+        password='12345',
+        dbname='postgres'
     )
     if conn:
         create_table(conn, 'your_table')
