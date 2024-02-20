@@ -43,14 +43,14 @@ def upload():
     now = datetime.now()
     # name files audio_Y_M_D_h_m_s.ogg
     filename = 'audio_{}.ogg'.format(now.strftime('%Y_%m_%d_%H_%M_%S'))
-
+    print("filename")
     # verify if file already exists, if true rename
     i = 1
     while os.path.exists(filename):
         name, ext = os.path.splitext(filename)
         filename = '{}_{}{}'.format(name, i, ext)
         i += 1
-
+    print("filename: ", filename)
     audio_file.save(filename)
 
     # create a log file with client id's if possible
