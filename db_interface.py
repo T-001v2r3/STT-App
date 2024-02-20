@@ -1,39 +1,38 @@
+import os
 import psycopg2
-from psycopg2 import Error
+from psycopg2 import sql, errors
+from dotenv import load_dotenv
+import argparse
 
-def create_connection():
-    conn = None;
-    try:
-        print("Attempting to connect to PostgreSQL database...")
-        conn = psycopg2.connect(
-            host='34.163.172.208',
-            port='5432',
-            user='postgres',
-            password='12345',
-            dbname='postgres'
-        )
-        if conn:
-            print('Connected to PostgreSQL database')
-    except Error as e:
-        print("Error occurred while connecting to database:", e)
-    return conn
+load_dotenv()  
+
+def database_exists(conn, db_name):
+    cur = conn.cursor()
+    cur.execute("SELECT 1 FROM pg_database WHERE datname = %s", (db_name,))
+    return cur.fetchone() is not None
+
+def table_exists(conn, table_name):
+    cur = conn.cursor()
+    cur.execute("""
+        SELECT 1 FROM information_schema.tables 
+        WHERE table_name = %s
+    """, (table_name,))
+    return cur.fetchone() is not None
 
 def create_database(conn, db_name):
-    try:
-        print(f"Attempting to create database {db_name}...")
-        conn.autocommit = True
+    if not database_exists(conn, db_name):
+        conn.autocommit = True  # set connection to autocommit mode
         cur = conn.cursor()
-        cur.execute(f"CREATE DATABASE {db_name}")
+        cur.execute(sql.SQL("CREATE DATABASE {}").format(sql.Identifier(db_name)))
         print(f"Database {db_name} created successfully")
-    except Error as e:
-        print(f"Error occurred while creating database {db_name}:", e)
+    else:
+        print(f"Database {db_name} already exists")
 
 def create_table(conn, table_name):
-    try:
-        print(f"Attempting to create table {table_name}...")
+    if not table_exists(conn, table_name):
         cur = conn.cursor()
-        cur.execute(f"""
-            CREATE TABLE IF NOT EXISTS {table_name} (
+        cur.execute(sql.SQL("""
+            CREATE TABLE IF NOT EXISTS {} (
                 EntryID SERIAL PRIMARY KEY,
                 InputDateTime TIMESTAMP NOT NULL,
                 AudioFileName TEXT NOT NULL,
@@ -41,32 +40,55 @@ def create_table(conn, table_name):
                 PreprocessedText TEXT,
                 AlertMetadata JSONB
             )
-        """)
+        """).format(sql.Identifier(table_name)))
+        conn.commit()
         print(f"Table {table_name} created successfully")
-    except Error as e:
-        print(f"Error ocurred while creating table {table_name}:", e)
+    else:
+        print(f"Table {table_name} already exists")
 
 def main():
-    conn = create_connection()
-    if conn:
-        create_database(conn, 'your_database')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--clean', action='store_true', help='Delete the current database and create a new one')
+    args = parser.parse_args()
+
+    db_credentials = {
+        'host': os.getenv('DB_HOST'),
+        'port': os.getenv('DB_PORT'),
+        'user': os.getenv('DB_USER'),
+        'password': os.getenv('DB_PASS'),
+    }
+    dbname = os.getenv('DB_NAME')
+    print("DB host: ", db_credentials['host'])
+    print("DB port: ", db_credentials['port'])
+    print("DB user: ", db_credentials['user'])
+    print("DB pass: ", db_credentials['password'])
+    print("DB name: ", dbname)
+
+    print("Attempting to connect to the PostgreSQL server...")
+    conn = psycopg2.connect(**db_credentials)
+    conn.autocommit = True
+    if args.clean:
+        print("Clean flag detected. Deleting and recreating the database...")
+        conn.autocommit = True  # set connection to autocommit mode
+        cur = conn.cursor()
+        cur.execute(sql.SQL("DROP DATABASE IF EXISTS {}").format(sql.Identifier(dbname)))
+        create_database(conn, dbname)
+        print("Database created. Closing connection...")
         conn.close()
     else:
-        print("Unable to create database due to connection error.")
+        print("Connected to the PostgreSQL server. Attempting to create database...")
+        create_database(conn, dbname)
+        print("Database created. Closing connection...")
+        conn.close()
 
     print("Reconnecting to the new database...")
-    conn = psycopg2.connect(
-        host='34.163.172.208',
-        port='5432',
-        user='postgres',
-        password='12345',
-        dbname='postgres'
-    )
+    db_credentials['dbname'] = dbname
+    conn = psycopg2.connect(**db_credentials)
     if conn:
-        create_table(conn, 'your_table')
+        print("Connected to the new database. Attempting to create table...")
+        create_table(conn, dbname)
+        print("Table created. Closing connection...")
         conn.close()
-    else:
-        print("Unable to create table due to connection error.")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

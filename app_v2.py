@@ -4,6 +4,12 @@ from datetime import datetime
 import os
 import logging
 from threading import Thread
+# db stuff
+import psycopg2
+from psycopg2 import sql, errors
+from dotenv import load_dotenv
+import json
+
 
 # Set up logging
 logging.basicConfig(filename='log.txt', level=logging.INFO, 
@@ -34,6 +40,57 @@ app = Flask(__name__)
 #
 #    # save on db path for the audio data
 #
+
+# this function will add to the table the new entry each one on each field
+def db_entry_add(conn, filename, timestamp, user_metadata):
+    print("Start Entry added to the table")
+    try:
+        cur = conn.cursor()
+        dbname = os.getenv('DB_NAME')
+        if dbname is None:
+            print("DB_NAME environment variable is not set")
+            return
+        # Convert the user_metadata set to a list and then to a JSON string
+        user_metadata_json = json.dumps(list(user_metadata))
+        cur.execute(sql.SQL("""
+            INSERT INTO {} (InputDateTime, AudioFileName, UserMetadata)
+            VALUES (%s, %s, %s)
+        """).format(sql.Identifier(dbname)), (timestamp, filename, user_metadata_json))
+    except Exception as e:
+        print("Error executing SQL query: ", e)
+        return
+    try:
+        conn.commit()
+    except Exception as e:
+        print("Error committing transaction: ", e)
+        return
+    print("Completed Entry added to the table")
+
+def create_db_entry(filename, timestamp, user_metadata):
+    db_credentials = {
+        'host': os.getenv('DB_HOST'),
+        'port': os.getenv('DB_PORT'),
+        'user': os.getenv('DB_USER'),
+        'password': os.getenv('DB_PASS'),
+        'dbname': os.getenv('DB_NAME'),
+    }
+    print("DB host: ", db_credentials['host'])
+    print("DB port: ", db_credentials['port'])
+    print("DB user: ", db_credentials['user'])
+    print("DB pass: ", db_credentials['password'])
+    print("DB name: ", db_credentials['dbname'])
+
+    print("Attempting to connect to the database...")
+    conn = psycopg2.connect(**db_credentials)
+    if conn:
+        print("Connected to the new database. Attempting to add entry...")
+        print("conn: ", conn)
+        print("filename: ", filename)
+        print("timestamp: ", timestamp)
+        db_entry_add(conn, filename, timestamp, {1})
+        print("Table created. Closing connection...")
+        conn.close()
+
 @app.route('/upload', methods=['POST'])
 def upload():
     # audio fetched from browser
@@ -55,6 +112,7 @@ def upload():
 
     # create a log file with client id's if possible
     log_action('Saved file: {}'.format(filename))
+    create_db_entry(filename, now, {1})
     # save on db the log for each alert
 
     # Start processing the file in a separate thread
