@@ -1,5 +1,5 @@
 config = speech.RecognitionConfig(
-  language_code="fr",
+  language_code="pt",
   enable_automatic_punctuation=True,
   enable_word_time_offsets=True,
 )
