@@ -15,7 +15,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
             chunks = [];
             let formData = new FormData();
             formData.append('audio', blob);
-            fetch('https://34.134.1.128:5000/upload', { method: 'POST', body: formData });
+            fetch('http://localhost:5000/upload', { method: 'POST', body: formData });
             //fetch('https://34.134.1.128:5000/upload', { method: 'POST', body: formData })
             //.then(response => {
             //    if (!response.ok) {

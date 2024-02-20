@@ -1,6 +1,6 @@
 from flask import Flask, request
 from datetime import datetime
-from google.cloud import speech
+#from google.cloud import speech
 import os
 import logging
 from threading import Thread
@@ -14,26 +14,26 @@ def log_action(action):
 
 app = Flask(__name__)
 
-def process_audio_file(filename):
-    client = speech.SpeechClient()
-
-    with open(filename, 'rb') as audio_file:
-        audio = speech.RecognitionAudio(content=audio_file.read())
-    config = speech.RecognitionConfig(
-        encoding=speech.RecognitionConfig.AudioEncoding.OGG_OPUS,
-        sample_rate_hertz=16000,
-        # this needs to be a config param from client
-        language_code="en-US",
-    )
-
-    response = client.recognize(config=config, audio=audio)
-
-    ## Process the response...
-    for result in response.results:
-        print(result.alternatives[0].transcript)
-
-    # save on db path for the audio data
-
+#def process_audio_file(filename):
+#    client = speech.SpeechClient()
+#
+#    with open(filename, 'rb') as audio_file:
+#        audio = speech.RecognitionAudio(content=audio_file.read())
+#    config = speech.RecognitionConfig(
+#        encoding=speech.RecognitionConfig.AudioEncoding.OGG_OPUS,
+#        sample_rate_hertz=16000,
+#        # this needs to be a config param from client
+#        language_code="en-US",
+#    )
+#
+#    response = client.recognize(config=config, audio=audio)
+#
+#    ## Process the response...
+#    for result in response.results:
+#        print(result.alternatives[0].transcript)
+#
+#    # save on db path for the audio data
+#
 @app.route('/upload', methods=['POST'])
 def upload():
     # audio fetched from browser
@@ -58,8 +58,8 @@ def upload():
     # save on db the log for each alert
 
     # Start processing the file in a separate thread
-    thread = Thread(target=process_audio_file, args=(filename,))
-    thread.start()
+    #thread = Thread(target=process_audio_file, args=(filename,))
+    #thread.start()
 
     return '', 204
 
