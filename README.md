@@ -1,3 +1,7 @@
+# Temporary links:
+- Root: https://34.134.1.128/
+- App: https://34.134.1.128/STT-App/
+
 # Current State:
 - The app recives the audio and saves it for further processing.
 - There are two ways to feed the audio, file upload and direct record through the browser.
@@ -12,6 +16,6 @@
 - EntryID, maybe numbered auto incremented?
 - Date and time of input;
 - Audio file name;
-- Preprocessed plain text retrived from the audio (google stt results);
 - User Metadata, to identify the creator of this alert;
+- Preprocessed plain text retrived from the audio (google stt results);
 - Alert metadata, in here goes the ML model results;
