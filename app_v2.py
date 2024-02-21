@@ -9,7 +9,7 @@ import psycopg2
 from psycopg2 import sql, errors
 from dotenv import load_dotenv
 import json
-
+from flask_cors import CORS
 
 # Set up logging
 logging.basicConfig(filename='log.txt', level=logging.INFO, 
@@ -19,6 +19,25 @@ def log_action(action):
     logging.info(action)
 
 app = Flask(__name__)
+CORS(app)
+
+@app.route('/decide-filename', methods=['GET'])
+def decide_filename():
+    # current date and time
+    now = datetime.now()
+    # name files audio_Y_M_D_h_m_s.ogg
+    filename = 'audio_{}.flac'.format(now.strftime('%Y_%m_%d_%H_%M_%S'))
+    print("filename")
+    # verify if file already exists, if true rename
+    i = 1
+    while os.path.exists(filename):
+        name, ext = os.path.splitext(filename)
+        filename = '{}_{}{}'.format(name, i, ext)
+        i += 1
+    print("filename: ", filename)
+    # Decide the filename
+    #filename = str(uuid.uuid4()) + '.flac'
+    return {'filename': filename}, 200
 
 #def process_audio_file(filename):
 #    client = speech.SpeechClient()

@@ -57,5 +57,6 @@ These scripts are beeing worked on:
 - pip install python-dotenv
 - pip install psycopg2
 - pip install --upgrade google-cloud-speech
+- pip install -U flask-cors
 
 

@@ -8,15 +8,47 @@
 <body>
     <h1 class="glitch" data-text="Speech to text utility">Speech to text utility</h1>
     <button id="recordButton">Start Recording</button>
-    <script src="main.js"></script>
+    <script src="main2.js"></script>
 
     <!-- for testing! maybe record now submit later policy enabled? maybe this can be a config idk-->
     <h2>Upload Audio</h2>
-    <form action="http://localhost:5000/upload" method="post" enctype="multipart/form-data">
+    <form id="uploadForm">
       Select audio to upload:
       <input type="file" name="audio" id="audio">
       <input type="submit" value="Upload Audio" name="submit">
     </form>
-
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let fileInput = document.getElementById('audio');
+            let file = fileInput.files[0];
+            
+            fetch('http://localhost:5000/decide-filename')
+            .then(response => response.json())
+            .then(data => {
+                let filename = data.filename;
+                console.log(filename);
+                // Upload file to Google Cloud Storage
+                let formData = new FormData();
+                formData.append('audio', file, filename);
+                fetch(`https://storage.googleapis.com/upload/storage/v1/b/ba-report-bucket/o?uploadType=media&name=${filename}`, {
+                    method: 'POST', 
+                    body: formData,
+                    headers: {Authorization: 'Bearer ya29.a0AfB_byAMREFSqyxfnXSkDYe9fiwzPHg9pbUOxF0rNBpitRVj_HJJHspIEV8OIPNAEFWvCEvRPl2m9JHwNMSKmSIw-2m9CH7Df1d6JnUmU11PLfJb3336TC71Vpk8lG5yL-1we7QhZwJf8GXTDZwCZuOn-5vZFFdH-tAhaCgYKAaQSARESFQHGX2MiAkKokx81kMQL9w0NfBZdew0171'}
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to upload file to Google Cloud Storage');
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+            })
+            .catch(error => {
+                console.error(error);
+            });
+        });
+    </script>
 </body>
 </html>
