@@ -56,4 +56,6 @@ These scripts are beeing worked on:
 - pip install flask
 - pip install python-dotenv
 - pip install psycopg2
+- pip install --upgrade google-cloud-speech
+
 
