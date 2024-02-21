@@ -19,8 +19,9 @@ navigator.mediaDevices.getUserMedia({ audio: true })
             formData.append('audio', blob, 'audio.webm');
         
             fetch('https://storage.googleapis.com/upload/storage/v1/b/ba-report-bucket/o?uploadType=media&name=audio.webm', {
-                method: 'POST',
-                body: blob
+                method: 'POST', 
+                body: blob,
+                headers: {Authorization: 'Bearer ya29.a0AfB_byAMREFSqyxfnXSkDYe9fiwzPHg9pbUOxF0rNBpitRVj_HJJHspIEV8OIPNAEFWvCEvRPl2m9JHwNMSKmSIw-2m9CH7Df1d6JnUmU11PLfJb3336TC71Vpk8lG5yL-1we7QhZwJf8GXTDZwCZuOn-5vZFFdH-tAhaCgYKAaQSARESFQHGX2MiAkKokx81kMQL9w0NfBZdew0171'}
             })
             .then(response => {
                 if (!response.ok) {
