@@ -94,10 +94,10 @@ def main():
         audio_data = audio_file.read()
 
     audio.content = audio_data
+    print("ola")
+    print("ola")
 
     response = speech_to_text(config, audio)
-    print("ola")
-    print("ola")
     print("ola")
     print("ola")
     print("response: ", response)
