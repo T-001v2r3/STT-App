@@ -96,6 +96,10 @@ def main():
     audio.content = audio_data
 
     response = speech_to_text(config, audio)
+    print("ola")
+    print("ola")
+    print("ola")
+    print("ola")
     print("response: ", response)
     print_response(response)
 
