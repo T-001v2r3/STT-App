@@ -21,7 +21,7 @@ def db_preprocessedtext_write(conn, dbname, filename, data):
         cur.execute(sql.SQL("""
             UPDATE {} 
             SET PreprocessedText = %s
-            WHERE filename = %s
+            WHERE audiofilename = %s
         """).format(sql.Identifier(dbname)), (preprocessedtext_metadata_json, filename))
     except Exception as e:
         print("Error executing SQL query: ", e)
