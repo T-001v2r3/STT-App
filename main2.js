@@ -26,7 +26,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
                     fetch(`https://storage.googleapis.com/upload/storage/v1/b/ba-report-bucket/o?uploadType=media&name=${filename}`, {
                         method: 'POST', 
                         body: blob,
-                        headers: {Authorization: 'Bearer ya29.a0AfB_byAMREFSqyxfnXSkDYe9fiwzPHg9pbUOxF0rNBpitRVj_HJJHspIEV8OIPNAEFWvCEvRPl2m9JHwNMSKmSIw-2m9CH7Df1d6JnUmU11PLfJb3336TC71Vpk8lG5yL-1we7QhZwJf8GXTDZwCZuOn-5vZFFdH-tAhaCgYKAaQSARESFQHGX2MiAkKokx81kMQL9w0NfBZdew0171'}
+                        headers: {Authorization: 'Bearer ya29.a0AfB_byCBXz_MO11Csru1iZYXNfKrPMyH9i1eJD2mBhOSBfRfLnK6VIciI3QlQTjhHzEBpX0kcc42r9hfOK2WSUvKOaxuAEa4dWsvkIy82X5T3jX-rjenDuc0Ky_TNzAVqSkKFd6v0rJ733om2hg7rSR4vbVFRNsW1zeraCgYKAWISARESFQHGX2MijSptFrv9PlMRFss1281g2w0171'}
                     })
                     .then(response => {
                         if (!response.ok) {
