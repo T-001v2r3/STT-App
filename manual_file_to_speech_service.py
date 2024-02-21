@@ -19,9 +19,10 @@ def db_preprocessedtext_write(conn, dbname, filename, data):
         # Convert the user_metadata set to a list and then to a JSON string
         preprocessedtext_metadata_json = json.dumps(list(data))
         cur.execute(sql.SQL("""
-            INSERT INTO {} (PreprocessedText) WHERE filename = %s
-            VALUES (%s)
-        """).format(sql.Identifier(dbname)), (filename, preprocessedtext_metadata_json))
+            UPDATE {} 
+            SET PreprocessedText = %s
+            WHERE filename = %s
+        """).format(sql.Identifier(dbname)), (preprocessedtext_metadata_json, filename))
     except Exception as e:
         print("Error executing SQL query: ", e)
         return
