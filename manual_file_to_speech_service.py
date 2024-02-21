@@ -8,7 +8,7 @@ from psycopg2 import sql, errors
 from dotenv import load_dotenv
 import json
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'client_service_key.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'application_default_credentials.json'
 
 # save the data on the preprocessedtext table
 def db_preprocessedtext_write(conn, dbname, filename, data):
