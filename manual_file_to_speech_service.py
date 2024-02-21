@@ -1,4 +1,6 @@
 from google.cloud import speech
+
+import argparse
 # db stuff
 import os
 import psycopg2
@@ -80,6 +82,13 @@ def print_result(result: speech.SpeechRecognitionResult):
         print(f"{start_s:>7.3f} | {end_s:>7.3f} | {word.word}")
 
 def main():
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--var', help='Description of the argument')
+    args = parser.parse_args()
+
+    # Now you can use args.var to access the value of the argument
+    print(args.var)
     config = speech.RecognitionConfig(
         encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,    
         sample_rate_hertz=16000,
@@ -87,7 +96,8 @@ def main():
         enable_automatic_punctuation=True,
         enable_word_time_offsets=True,
     )
-    filename = "audio_2024_02_21_12_23_16.webm"
+    # filename = "audio_2024_02_21_12_23_16.webm"
+    filename = args.var
 
     audio = speech.RecognitionAudio()
     with open(filename, "rb") as audio_file:
