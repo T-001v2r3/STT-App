@@ -81,11 +81,11 @@ def print_result(result: speech.SpeechRecognitionResult):
 
 def main():
     config = speech.RecognitionConfig(
-    encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,    
-    sample_rate_hertz=16000,
-    language_code="pt",
-    enable_automatic_punctuation=True,
-    enable_word_time_offsets=True,
+        encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,    
+        sample_rate_hertz=16000,
+        language_code="pt",
+        enable_automatic_punctuation=True,
+        enable_word_time_offsets=True,
     )
     filename = "audio_2024_02_21_12_23_16.webm"
 
