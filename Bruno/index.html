@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Speech to text utility</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <header>
+        <img src="/home/bruno/Documentos/BA/test/STT-App/imgs/baglass.png" alt="Logo" align="left">
+        <h1>Incident Report&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    </header>
+<!--    <div style="text-align: center; margin-top: 200px;">
+
+    </div>-->
+    <div id="recordButtonContainer">
+        <form action="http://localhost:5000/upload" method="post" enctype="multipart/form-data" style="margin-bottom: 5%";>
+            <input type="text" name="workerNumber" placeholder="Número de Trabalhador" style="font-size: 20px; text-align: center;";>
+        </form>
+ <!--       <h1 class="glitch" data-text="Speech to text utility">Speech to text utility</h1> -->
+        <button id="recordButton">Start Recording</button>
+        <script src="main.js"></script>
+        <div class="recordButtonContainer">
+            <form action="http://localhost:5000/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="audio" id="audio">
+            </form>
+        </div>
+        <div class="recordButtonContainer">
+            <form action="http://localhost:5000/upload" method="post" enctype="multipart/form-data">
+                <input type="submit" value="Upload!" name="submit" id="uploadButton">
+            </form>
+        </div>
+    </div>
+
+    <!-- for testing! maybe record now submit later policy enabled? maybe this can be a config idk-->
+
+</body>
+</html>
