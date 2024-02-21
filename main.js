@@ -11,10 +11,10 @@ navigator.mediaDevices.getUserMedia({ audio: true })
         };
 
         mediaRecorder.onstop = function(e) {
-            let blob = new Blob(chunks, { 'type' : 'audio/webm;codecs=pcm' });
+            let blob = new Blob(chunks, { 'type' : 'audio/webm;codecs=opus' });
             chunks = [];
             let formData = new FormData();
-            formData.append('audio', blob, 'audio.webm');
+            formData.append('audio', blob, 'audio.flac');
             fetch('http://localhost:5000/upload', { method: 'POST', body: formData })
                 .then(response => response.json())
                 .then(data => {
@@ -22,7 +22,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
                         content: data.audio
                     };
                     let config = {
-                        encoding: 'LINEAR16',
+                        encoding: 'FLAC',
                         sampleRateHertz: 16000,
                         languageCode: 'en-US',
                     };
