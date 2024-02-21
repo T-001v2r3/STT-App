@@ -5,6 +5,7 @@
 # Stepbacks / issues needing fix asap:
 	- Need to fix file uploads for the cloud.
 	- Need to figure out the setup for google speech to text plugin outside of ipython.
+
 # Current State:
 These scripts are beeing worked on:
 

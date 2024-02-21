@@ -1,0 +1,80 @@
+02/21/2024 11:50:50 AM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/21/2024 11:50:50 AM [33mPress CTRL+C to quit[0m
+02/21/2024 11:50:58 AM Saved file: audio_2024_02_21_11_50_58.ogg
+02/21/2024 11:50:58 AM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/app_v2.py", line 115, in upload
+    create_db_entry(filename, now, {1})
+  File "/home/fullname/Desktop/STT-App/app_v2.py", line 84, in create_db_entry
+    conn = psycopg2.connect(**db_credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+02/21/2024 11:50:58 AM 127.0.0.1 - - [21/Feb/2024 11:50:58] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/21/2024 11:52:35 AM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/21/2024 11:52:35 AM [33mPress CTRL+C to quit[0m
+02/21/2024 11:52:45 AM Saved file: audio_2024_02_21_11_52_45.ogg
+02/21/2024 11:52:45 AM 127.0.0.1 - - [21/Feb/2024 11:52:45] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 11:58:30 AM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/21/2024 11:58:30 AM [33mPress CTRL+C to quit[0m
+02/21/2024 11:58:36 AM Saved file: audio_2024_02_21_11_58_36.ogg
+02/21/2024 11:58:36 AM 127.0.0.1 - - [21/Feb/2024 11:58:36] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 11:58:37 AM Saved file: audio_2024_02_21_11_58_37.ogg
+02/21/2024 11:58:37 AM 127.0.0.1 - - [21/Feb/2024 11:58:37] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 11:58:37 AM Saved file: audio_2024_02_21_11_58_37_1.ogg
+02/21/2024 11:58:37 AM Saved file: audio_2024_02_21_11_58_37_1_2.ogg
+02/21/2024 11:58:37 AM 127.0.0.1 - - [21/Feb/2024 11:58:37] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 11:58:38 AM 127.0.0.1 - - [21/Feb/2024 11:58:38] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 11:58:39 AM Saved file: audio_2024_02_21_11_58_39.ogg
+02/21/2024 11:58:39 AM Saved file: audio_2024_02_21_11_58_39_1.ogg
+02/21/2024 11:58:40 AM 127.0.0.1 - - [21/Feb/2024 11:58:40] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 11:58:40 AM Saved file: audio_2024_02_21_11_58_40.ogg
+02/21/2024 11:58:40 AM 127.0.0.1 - - [21/Feb/2024 11:58:40] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 11:58:40 AM Saved file: audio_2024_02_21_11_58_40_1.ogg
+02/21/2024 11:58:40 AM 127.0.0.1 - - [21/Feb/2024 11:58:40] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 11:58:40 AM Saved file: audio_2024_02_21_11_58_40_1_2.ogg
+02/21/2024 11:58:40 AM 127.0.0.1 - - [21/Feb/2024 11:58:40] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 11:58:41 AM Saved file: audio_2024_02_21_11_58_41.ogg
+02/21/2024 11:58:41 AM 127.0.0.1 - - [21/Feb/2024 11:58:41] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 11:58:41 AM Saved file: audio_2024_02_21_11_58_41_1.ogg
+02/21/2024 11:58:41 AM 127.0.0.1 - - [21/Feb/2024 11:58:41] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 11:58:41 AM 127.0.0.1 - - [21/Feb/2024 11:58:41] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 11:58:51 AM Saved file: audio_2024_02_21_11_58_51.ogg
+02/21/2024 11:58:52 AM 127.0.0.1 - - [21/Feb/2024 11:58:52] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 12:01:06 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/21/2024 12:01:06 PM [33mPress CTRL+C to quit[0m
+02/21/2024 12:01:45 PM Saved file: audio_2024_02_21_12_01_45.ogg
+02/21/2024 12:01:46 PM 127.0.0.1 - - [21/Feb/2024 12:01:46] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 12:16:06 PM Saved file: audio_2024_02_21_12_16_06.ogg
+02/21/2024 12:16:06 PM 127.0.0.1 - - [21/Feb/2024 12:16:06] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 12:17:07 PM Saved file: audio_2024_02_21_12_17_07.ogg
+02/21/2024 12:17:08 PM 127.0.0.1 - - [21/Feb/2024 12:17:08] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 12:17:37 PM Saved file: audio_2024_02_21_12_17_37.ogg
+02/21/2024 12:17:37 PM 127.0.0.1 - - [21/Feb/2024 12:17:37] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 12:21:53 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/21/2024 12:21:53 PM [33mPress CTRL+C to quit[0m
+02/21/2024 12:22:14 PM Saved file: audio_2024_02_21_12_22_14.webm
+02/21/2024 12:22:14 PM 127.0.0.1 - - [21/Feb/2024 12:22:14] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 12:23:16 PM Saved file: audio_2024_02_21_12_23_16.webm
+02/21/2024 12:23:17 PM 127.0.0.1 - - [21/Feb/2024 12:23:17] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -

@@ -99,7 +99,7 @@ def upload():
     # current date and time
     now = datetime.now()
     # name files audio_Y_M_D_h_m_s.ogg
-    filename = 'audio_{}.ogg'.format(now.strftime('%Y_%m_%d_%H_%M_%S'))
+    filename = 'audio_{}.webm'.format(now.strftime('%Y_%m_%d_%H_%M_%S'))
     print("filename")
     # verify if file already exists, if true rename
     i = 1

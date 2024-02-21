@@ -160,4 +160,4 @@ Summary:
 print(f"Response from Model: {response.text}")
 # send reponse to db
 alertID = 1
-output_to_db(alertID, response)
+output_to_db(alertID, response.text)
