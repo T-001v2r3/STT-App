@@ -83,3 +83,6 @@ psycopg2.OperationalError: connection to server on socket "/var/run/postgresql/.
 02/21/2024 02:23:55 PM [33mPress CTRL+C to quit[0m
 02/21/2024 02:24:33 PM Saved file: audio_2024_02_21_14_24_33.webm
 02/21/2024 02:24:34 PM 127.0.0.1 - - [21/Feb/2024 14:24:34] "[35m[1mPOST /upload HTTP/1.1[0m" 204 -
+02/21/2024 02:34:26 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/21/2024 02:34:26 PM [33mPress CTRL+C to quit[0m
