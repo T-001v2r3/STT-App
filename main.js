@@ -2,6 +2,7 @@ let recordButton = document.getElementById('recordButton');
 let chunks = [];
 let mediaRecorder;
 
+
 navigator.mediaDevices.getUserMedia({ audio: true })
     .then(stream => {
         mediaRecorder = new MediaRecorder(stream);
