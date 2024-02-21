@@ -7,11 +7,10 @@ from dotenv import load_dotenv
 import json
 
 # save the data on the preprocessedtext table
-def db_preprocessedtext_write(conn, filename, data):
+def db_preprocessedtext_write(conn, dbname, filename, data):
     print("Start preprocessed text added to the table")
     try:
         cur = conn.cursor()
-        dbname = os.getenv('DB_NAME')
         if dbname is None:
             print("DB_NAME environment variable is not set")
             return
@@ -33,11 +32,11 @@ def db_preprocessedtext_write(conn, filename, data):
 
 def output_to_db(filename, data):
     db_credentials = {
-        'host': os.getenv('DB_HOST'),
-        'port': os.getenv('DB_PORT'),
-        'user': os.getenv('DB_USER'),
-        'password': os.getenv('DB_PASS'),
-        'dbname': os.getenv('DB_NAME'),
+        'host':    '34.163.172.208',
+        'port':    '5432',
+        'user':    'postgres',
+        'password':'12345',
+        'dbname':  'new_database'
     }
     print("DB host: ", db_credentials['host'])
     print("DB port: ", db_credentials['port'])
@@ -51,7 +50,7 @@ def output_to_db(filename, data):
         print("Connected to the new database. Attempting to write preprocessed text...")
         print("conn: ", conn)
         print("filename: ", filename)
-        db_preprocessedtext_write(conn, filename, data)
+        db_preprocessedtext_write(conn, db_credentials['dbname'], filename, data)
         print("preprocessed text written. Closing connection...")
         conn.close()
 
@@ -82,11 +81,13 @@ def print_result(result: speech.SpeechRecognitionResult):
 
 def main():
     config = speech.RecognitionConfig(
-      language_code="pt",
-      enable_automatic_punctuation=True,
-      enable_word_time_offsets=True,
+    encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,    
+    sample_rate_hertz=16000,
+    language_code="pt",
+    enable_automatic_punctuation=True,
+    enable_word_time_offsets=True,
     )
-    filename = "speech_brooklyn_bridge.flac"
+    filename = "audio_2024_02_21_12_23_16.webm"
 
     audio = speech.RecognitionAudio()
     with open(filename, "rb") as audio_file:
