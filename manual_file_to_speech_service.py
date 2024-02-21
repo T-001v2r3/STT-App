@@ -91,9 +91,9 @@ def main():
     # Now you can use args.var to access the value of the argument
     print(args.var)
     config = speech.RecognitionConfig(
-        encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,    
-        sample_rate_hertz=16000,
-        language_code="pt",
+        #encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,    
+        #sample_rate_hertz=16000,
+        language_code="en",
         enable_automatic_punctuation=True,
         enable_word_time_offsets=True,
     )
