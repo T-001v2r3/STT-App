@@ -114,7 +114,7 @@ def main():
     print_response(response)
 
     # send reponse to db
-    output_to_db(filename, response)
+    output_to_db(filename, data = [result.alternatives[0].transcript for result in response.results])
 
 if __name__ == "__main__":
     main()
