@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from google.cloud import speech
 
 import argparse
