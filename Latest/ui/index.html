@@ -17,7 +17,7 @@
     <div id="recordButtonContainer">
         <div class="recordButtonContainer">
             <button id="recordButton">Start Recording</button>
-            <script src="main2.js"></script>
+            <script src="main.js"></script>
         </div>
 
         <div class="recordButtonContainer">
@@ -29,41 +29,5 @@
             </form>
         </div>
     </div>
-    <script>
-       document.getElementById('uploadForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    let fileInput = document.getElementById('audio');
-    let file = fileInput.files[0];
-    
-    // Fetch a fresh access token from Flask server
-    fetch('/get-access-token')
-    .then(response => response.json())
-    .then(data => {
-        let accessToken = data.access_token;
-        // Upload file to Google Cloud Storage
-        let formData = new FormData();
-        formData.append('audio', file);
-        fetch(`https://storage.googleapis.com/upload/storage/v1/b/ba-report-bucket/o?uploadType=media&name=${filename}`, {
-            method: 'POST', 
-            body: formData,
-            headers: {
-                Authorization: `Bearer ${accessToken}`
-            }
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to upload file to Google Cloud Storage');
-            }
-        })
-        .catch(error => {
-            console.error(error);
-        });
-    })
-    .catch(error => {
-        console.error(error);
-    });
-});
-
-    </script>
 </body>
 </html>
