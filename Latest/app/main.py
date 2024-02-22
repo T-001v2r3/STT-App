@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 import vertexai
 from vertexai.language_models import TextGenerationModel
-from google.cloud import speech
+from google.cloud import speech, storage
+from google.oauth2 import service_account
+from google.auth.transport import requests
+import google.auth
+import google.auth.exceptions
+import google.auth.transport.requests
 import argparse
 from flask import Flask, request
 from flask_cors import CORS
@@ -378,6 +383,19 @@ def upload():
 	create_db_entry(filename, now, {1})
 
 	return '', 204
+# Google Cloud Auth
+credentials = service_account.Credentials.from_service_account_file(
+    'application_default_credentials.json',
+    scopes=['https://www.googleapis.com/auth/cloud-platform']
+)
+storage_client = storage.Client(credentials=credentials)
+@app.route('/get-access-token')
+def get_access_token():
+    try:
+        request = google.auth.transport.requests.Request()
+        credentials.refresh(request)
+        return jsonify({'access_token': credentials.token})
+    except google.auth.exceptions.RefreshError a
 ##################################################################
 ############################# Install db #########################
 ##################################################################
