@@ -16,7 +16,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
         
 
                     // Get the decided filename from the server
-                    fetch('http://localhost:5000/decide-filename')  // Replace with your server's URL
+                    fetch('https://34.38.170.45:5000/decide-filename')  // Replace with your server's URL
                         .then(response => response.json())
                         .then(data => {
                             let filename = data.filename;
@@ -36,7 +36,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
                                     throw new Error('Failed to upload file to Google Cloud Storage');
                                 }
                                 // Call next step
-                                fetch('http://localhost:5000/request-transcribe', {
+                                fetch('https://34.38.170.45:5000/request-transcribe', {
                                     method: 'POST', 
                                     body: JSON.stringify({ filename: filename }),
                                     headers: { 'Content-Type': 'application/json' }

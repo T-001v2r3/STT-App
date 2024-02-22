@@ -11,24 +11,21 @@
         <img src="./imgs/baglass.png" alt="Logo" align="left">
         <h1>Incident Report&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
     </header>
-<!--    <div style="text-align: center; margin-top: 200px;">
 
-    </div>-->
     <div id="recordButtonContainer">
         <div class="recordButtonContainer">
-            <button id="recordButton">Start Recording</button>
-            <script src="main.js"></script>
+            <form id="uploadForm">
+                <input type="text" name="workerNumber" placeholder="Número de Trabalhador"
+                style="font-size: 20px; text-align: center;" id="workerNumberInput" required>
+
+                <button id="recordButton">Start Recording</button>
+                <script src="main.js"></script>
         </div>
 
         <div class="recordButtonContainer">
-            <h2>Upload Audio</h2>
-            <form id="uploadForm">
-              Select audio to upload:
               <input type="file" name="audio" id="audio">
-              <input type="submit" value="Upload" name="submit">
+              <input type="submit" value="uploadForm" name="submit">
             </form>
-        </div>
-    </div>
     <script>
        document.getElementById('uploadForm').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -36,6 +33,12 @@
     let file = fileInput.files[0];
         let formData = new FormData();
         formData.append('audio', file);
+
+// Get the decided filename from the server
+fetch('https://34.38.170.45:5000/decide-filename')  // Replace with your server's URL
+    .then(response => response.json())
+    .then(data => {
+        let filename = data.filename;
         fetch(`https://storage.googleapis.com/upload/storage/v1/b/ba-report-bucket/o?uploadType=media&name=${filename}`, {
             method: 'POST', 
             body: formData,
@@ -55,7 +58,12 @@
     .catch(error => {
         console.error(error);
     });
+                        })
+                        .catch(error => console.error(error));
 
     </script>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
