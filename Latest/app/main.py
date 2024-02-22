@@ -383,20 +383,7 @@ def upload():
 	create_db_entry(filename, now, {1})
 
 	return '', 204
-# Google Cloud Auth
-credentials = service_account.Credentials.from_service_account_file(
-    'application_default_credentials.json',
-    scopes=['https://www.googleapis.com/auth/cloud-platform']
-)
-storage_client = storage.Client(credentials=credentials)
-@app.route('/get-access-token')
-def get_access_token():
-	try:
-		request = google.auth.transport.requests.Request()
-		credentials.refresh(request)
-		return jsonify({'access_token': credentials.token})
-	except google.auth.exceptions.RefreshError as e:
-		return jsonify({'error': str(e)}), 500
+
 
 ##################################################################
 ############################# Install db #########################

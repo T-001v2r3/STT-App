@@ -14,11 +14,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
             let blob = new Blob(chunks, { 'type' : 'audio/webm;codecs=pcm' });
             chunks = [];
         
-            // Fetch a fresh access token from Flask server
-            fetch('/get-access-token')
-                .then(response => response.json())
-                .then(data => {
-                    let accessToken = data.access_token;
+
                     // Get the decided filename from the server
                     fetch('http://localhost:5000/decide-filename')  // Replace with your server's URL
                         .then(response => response.json())
@@ -49,8 +45,6 @@ navigator.mediaDevices.getUserMedia({ audio: true })
                             .catch(error => console.error(error));
                         })
                         .catch(error => console.error(error));
-                })
-                .catch(error => console.error(error));
         };        
     });
 
