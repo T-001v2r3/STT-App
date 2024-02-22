@@ -9,7 +9,7 @@ import google.auth.exceptions
 import google.auth.transport.requests
 import argparse
 from flask import Flask, request
-#from flask_cors import CORS
+from flask_cors import CORS
 from datetime import datetime
 import os
 import logging
@@ -20,7 +20,7 @@ import json
 import sys
 from flask import jsonify
 app = Flask(__name__)
-#CORS(app)
+CORS(app)
 ##################################################################
 ###################### Credentials ###############################
 ##################################################################
@@ -366,8 +366,9 @@ def decide_filename():
 
 @app.route('/processManualUpload', methods=['POST'])
 def processManualUpload():
-    print('Received request for /processManualUpload')
-    # Rest of your code...
+	print('Received request for /processManualUpload')
+	print(request.json)
+	return jsonify(message="Success")
 
 # Recive a signal when man upload
 #@app.route('/processManualUpload', methods=['POST'])
