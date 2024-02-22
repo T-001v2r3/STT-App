@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to text utility</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="./imgs/baglass.png" alt="Logo" align="left">
+        <h1>Incident Report&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    </header>
+
+    <div id="recordButtonContainer">
+        <div class="recordButtonContainer">
+            <form id="uploadForm">
+                <input type="text" name="workerNumber" placeholder="Número de Trabalhador"
+                    style="font-size: 20px; text-align: center;" id="workerNumberInput" required>
+
+                <button id="recordButton">Start Recording</button>
+                <script src="main-bruno.js"></script>
+        </div>
+
+        <div class="recordButtonContainer">
+            <input type="file" name="audio" id="audio">
+            <input type="submit" value="uploadForm" name="submit">
+            </form>
+            <script>
+                document.getElementById('uploadForm').addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    let fileInput = document.getElementById('audio');
+                    let file = fileInput.files[0];
+
+                    if (!file.type.startsWith('audio/')) {
+                        console.error('Uploaded file is not an audio file');
+                        return;
+                    }
+                    if (file.size === 0) {
+                        console.error('Cannot send empty audio file');
+                        return;
+                    }
+                        let formData = new FormData();
+                        formData.append('audio', file);
+
+                        fetch('http://localhost:5000/upload-form', {
+                            method: 'POST',
+                            body: formData
+                        })
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Failed to upload file to backend');
+                                }
+                                console.log('File uploaded successfully to backend');
+                            })
+                            .catch(error => {
+                                console.error(error);
+                            });
+                    });
+            </script>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

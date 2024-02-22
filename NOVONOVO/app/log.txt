@@ -1,0 +1,85 @@
+02/22/2024 01:08:31 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 01:08:31 PM [33mPress CTRL+C to quit[0m
+02/22/2024 02:09:36 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 02:10:20 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 02:12:48 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 02:12:48 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 02:12:48 PM [33mPress CTRL+C to quit[0m
+02/22/2024 02:13:17 PM 127.0.0.1 - - [22/Feb/2024 14:13:17] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:13:29 PM 127.0.0.1 - - [22/Feb/2024 14:13:29] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:13:30 PM 127.0.0.1 - - [22/Feb/2024 14:13:30] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:13:48 PM 127.0.0.1 - - [22/Feb/2024 14:13:48] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:15:51 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 02:15:51 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 02:15:51 PM [33mPress CTRL+C to quit[0m
+02/22/2024 02:16:02 PM 127.0.0.1 - - [22/Feb/2024 14:16:02] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:16:12 PM 127.0.0.1 - - [22/Feb/2024 14:16:12] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:30:16 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 02:30:16 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 02:30:16 PM [33mPress CTRL+C to quit[0m
+02/22/2024 02:30:36 PM 127.0.0.1 - - [22/Feb/2024 14:30:36] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:30:42 PM 127.0.0.1 - - [22/Feb/2024 14:30:42] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:30:42 PM 127.0.0.1 - - [22/Feb/2024 14:30:42] "OPTIONS /upload-recorded HTTP/1.1" 200 -
+02/22/2024 02:30:44 PM Exception on /upload-recorded [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 873, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 892, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1164, in make_response
+    raise TypeError(
+TypeError: The view function for 'upload_recorded' did not return a valid response. The function either returned None or ended without a return statement.
+02/22/2024 02:30:44 PM 127.0.0.1 - - [22/Feb/2024 14:30:44] "[35m[1mPOST /upload-recorded HTTP/1.1[0m" 500 -
+02/22/2024 02:31:53 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 02:31:53 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 02:31:53 PM [33mPress CTRL+C to quit[0m
+02/22/2024 02:32:01 PM 127.0.0.1 - - [22/Feb/2024 14:32:01] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:32:04 PM 127.0.0.1 - - [22/Feb/2024 14:32:04] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:32:04 PM 127.0.0.1 - - [22/Feb/2024 14:32:04] "OPTIONS /upload-recorded HTTP/1.1" 200 -
+02/22/2024 02:32:08 PM 127.0.0.1 - - [22/Feb/2024 14:32:08] "POST /upload-recorded HTTP/1.1" 200 -
+02/22/2024 02:34:11 PM 127.0.0.1 - - [22/Feb/2024 14:34:11] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:34:14 PM 127.0.0.1 - - [22/Feb/2024 14:34:14] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:34:14 PM 127.0.0.1 - - [22/Feb/2024 14:34:14] "OPTIONS /upload-recorded HTTP/1.1" 200 -
+02/22/2024 02:34:15 PM 127.0.0.1 - - [22/Feb/2024 14:34:15] "POST /upload-recorded HTTP/1.1" 200 -
+02/22/2024 02:57:17 PM 127.0.0.1 - - [22/Feb/2024 14:57:17] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:57:18 PM 127.0.0.1 - - [22/Feb/2024 14:57:18] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:58:16 PM 127.0.0.1 - - [22/Feb/2024 14:58:16] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:58:16 PM 127.0.0.1 - - [22/Feb/2024 14:58:16] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:58:16 PM 127.0.0.1 - - [22/Feb/2024 14:58:16] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:58:17 PM 127.0.0.1 - - [22/Feb/2024 14:58:17] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:58:17 PM 127.0.0.1 - - [22/Feb/2024 14:58:17] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:09:58 PM 127.0.0.1 - - [22/Feb/2024 15:09:58] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:20:32 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 03:20:32 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 03:20:32 PM [33mPress CTRL+C to quit[0m
+02/22/2024 03:25:03 PM 127.0.0.1 - - [22/Feb/2024 15:25:03] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:32:47 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 03:32:47 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 03:32:47 PM [33mPress CTRL+C to quit[0m
+02/22/2024 03:32:49 PM 127.0.0.1 - - [22/Feb/2024 15:32:49] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:32:51 PM 127.0.0.1 - - [22/Feb/2024 15:32:51] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:32:54 PM 127.0.0.1 - - [22/Feb/2024 15:32:54] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:36:18 PM 127.0.0.1 - - [22/Feb/2024 15:36:18] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:36:18 PM 127.0.0.1 - - [22/Feb/2024 15:36:18] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:36:19 PM 127.0.0.1 - - [22/Feb/2024 15:36:19] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:36:19 PM 127.0.0.1 - - [22/Feb/2024 15:36:19] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:37:07 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 03:37:07 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 03:37:07 PM [33mPress CTRL+C to quit[0m
+02/22/2024 03:37:12 PM 127.0.0.1 - - [22/Feb/2024 15:37:12] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:37:12 PM 127.0.0.1 - - [22/Feb/2024 15:37:12] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:37:12 PM 127.0.0.1 - - [22/Feb/2024 15:37:12] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:37:12 PM 127.0.0.1 - - [22/Feb/2024 15:37:12] "POST /upload-form HTTP/1.1" 200 -
