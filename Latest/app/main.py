@@ -377,7 +377,17 @@ def upload():
 	audio_file = request.files['audio']
 
 	# request a file name
-	filename = decide_filename()
+	# current date and time
+	now = datetime.now()
+	# name with date and time so it acts like unique id for the file
+	filename = 'audio_{}.flac'.format(now.strftime('%Y_%m_%d_%H_%M_%S'))
+	print("filename")
+	# verify if file already exists, if true rename
+	i = 1
+	while os.path.exists(filename):
+		name, ext = os.path.splitext(filename)
+		filename = '{}_{}{}'.format(name, i, ext)
+		i += 1
 	print("filename: ", filename)
 	audio_file.save(filename)
 
