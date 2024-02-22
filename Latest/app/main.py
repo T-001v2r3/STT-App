@@ -9,7 +9,7 @@ import google.auth.exceptions
 import google.auth.transport.requests
 import argparse
 from flask import Flask, request
-from flask_cors import CORS
+#from flask_cors import CORS
 from datetime import datetime
 import os
 import logging
@@ -20,7 +20,7 @@ import json
 import sys
 from flask import jsonify
 app = Flask(__name__)
-CORS(app)
+#CORS(app)
 ##################################################################
 ###################### Credentials ###############################
 ##################################################################
