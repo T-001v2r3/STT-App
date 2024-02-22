@@ -1,61 +1,93 @@
+// Obtém uma referência para o elemento HTML com o ID 'recordButton'
 let recordButton = document.getElementById('recordButton');
+
+// Inicializa uma matriz vazia para armazenar os chunks de áudio
 let chunks = [];
+
+// Declaração da variável que será usada para controlar a gravação de áudio
 let mediaRecorder;
 
+// Envia áudio gravado para o servidor
+function enviarAudioParaServidor(blob) {
+
+    // Send the audio blob to the Flask backend
+    fetch('http://localhost:5000/upload-recorded', { // Update the URL to your Flask backend endpoint
+        method: 'POST',
+        body: blob
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to send audio file to the backend');
+            }
+            console.log('Audio file sent successfully to the backend');
+        })
+        .catch(error => {
+            console.error('Error while sending audio file to the server:', error);
+        });
+}
+
+// Manipulador do evento de clique do botão "recordButton"
+recordButton.onclick = function () {
+    if (mediaRecorder.state === 'recording') {
+        mediaRecorder.stop();
+        recordButton.textContent = 'Start Recording';
+        recordButton.style.backgroundColor = "#3498db"; // Altera a cor do botão para azul
+    } else {
+        mediaRecorder.start();
+        recordButton.textContent = 'Stop Recording';
+        recordButton.style.backgroundColor = "red"; // Altera a cor do botão para vermelho
+    }
+};
+
+// Configuração do MediaRecorder após a permissão do usuário
 navigator.mediaDevices.getUserMedia({ audio: true })
     .then(stream => {
         mediaRecorder = new MediaRecorder(stream);
 
-        mediaRecorder.ondataavailable = function(e) {
+        mediaRecorder.ondataavailable = function (e) {
             chunks.push(e.data);
         };
 
-        mediaRecorder.onstop = function(e) {
-            let blob = new Blob(chunks, { 'type' : 'audio/webm;codecs=pcm' });
+        mediaRecorder.onstop = function (e) {
+            let blob = new Blob(chunks, { 'type': 'audio/webm;codecs=pcm' });
             chunks = [];
-        
 
-                    // Get the decided filename from the server
-                    fetch('https://34.38.170.45:5000/decide-filename')  // Replace with your server's URL
-                        .then(response => response.json())
-                        .then(data => {
-                            let filename = data.filename;
-            
-                            // Upload file to Google Cloud Bucket
-                            let formData = new FormData();
-                            formData.append('audio', blob, filename);
-                            fetch(`https://storage.googleapis.com/upload/storage/v1/b/ba-report-bucket/o?uploadType=media&name=${filename}`, {
-                                method: 'POST', 
-                                body: formData,
-                                headers: {
-                                    Authorization: `Bearer`
-                                }
-                            })
-                            .then(response => {
-                                if (!response.ok) {
-                                    throw new Error('Failed to upload file to Google Cloud Storage');
-                                }
-                                // Call next step
-                                fetch('https://34.38.170.45:5000/request-transcribe', {
-                                    method: 'POST', 
-                                    body: JSON.stringify({ filename: filename }),
-                                    headers: { 'Content-Type': 'application/json' }
-                                })
-                            })
-                            .catch(error => console.error(error));
-                        })
-                        .catch(error => console.error(error));
-        };        
+            // Envie o áudio para o servidor quando a gravação parar
+            enviarAudioParaServidor(blob);
+        };
+    })
+    .catch(error => {
+        console.error('Erro ao acessar o microfone:', error);
     });
 
-    recordButton.onclick = function() {
-        if (mediaRecorder.state === 'recording') {
-            mediaRecorder.stop();
-            recordButton.textContent = 'Start Recording';
-            recordButton.style.backgroundColor = "#3498db"; // Altera a cor do botão para vermelho
-        } else {
-            mediaRecorder.start();
-            recordButton.textContent = 'Stop Recording';
-            recordButton.style.backgroundColor = "red"; // Altera a cor do botão para vermelho
-        }
-};
+document.getElementById('uploadForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let fileInput = document.getElementById('audio');
+    let file = fileInput.files[0];
+
+    if (!file.type.startsWith('audio/')) {
+        console.error('Uploaded file is not an audio file');
+        return;
+    }
+    if (file.size === 0) {
+        console.error('Cannot send empty audio file');
+        return;
+    }
+    let formData = new FormData();
+    formData.append('audio', file);
+
+    fetch('http://localhost:5000/upload-form', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to upload file to backend');
+            }
+            console.log('File uploaded successfully to backend');
+        })
+        .catch(error => {
+            console.error(error);
+        });
+});

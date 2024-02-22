@@ -83,3 +83,10 @@ TypeError: The view function for 'upload_recorded' did not return a valid respon
 02/22/2024 03:37:12 PM 127.0.0.1 - - [22/Feb/2024 15:37:12] "POST /upload-form HTTP/1.1" 200 -
 02/22/2024 03:37:12 PM 127.0.0.1 - - [22/Feb/2024 15:37:12] "POST /upload-form HTTP/1.1" 200 -
 02/22/2024 03:37:12 PM 127.0.0.1 - - [22/Feb/2024 15:37:12] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:58:06 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 03:58:06 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 03:58:06 PM [33mPress CTRL+C to quit[0m
+02/22/2024 03:58:32 PM 127.0.0.1 - - [22/Feb/2024 15:58:32] "OPTIONS /upload-recorded HTTP/1.1" 200 -
+02/22/2024 03:58:34 PM 127.0.0.1 - - [22/Feb/2024 15:58:34] "POST /upload-recorded HTTP/1.1" 200 -
+02/22/2024 04:00:08 PM 127.0.0.1 - - [22/Feb/2024 16:00:08] "POST /upload-form HTTP/1.1" 200 -
