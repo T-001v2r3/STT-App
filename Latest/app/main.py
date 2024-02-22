@@ -366,7 +366,13 @@ def decide_filename():
 
 # This is for the client to send the audio file to the server
 @app.route('/uploadForm', methods=['POST'])
+def uploadForm():
+	print("uploadForm")
+
+# This is for the client to send the audio file to the server
+@app.route('/upload', methods=['POST'])
 def upload():
+	print("upload")
 	# audio fetched from browser
 	audio_file = request.files['audio']
 
