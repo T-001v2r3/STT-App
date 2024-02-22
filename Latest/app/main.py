@@ -18,6 +18,7 @@ from psycopg2 import sql, errors
 from dotenv import load_dotenv
 import json
 import sys
+from flask import jsonify
 app = Flask(__name__)
 CORS(app)
 ##################################################################
@@ -86,9 +87,8 @@ model = TextGenerationModel.from_pretrained("text-bison@001")
 
 def generate_summary_and_save_to_db(report, filename):
 	response = model.predict(
-	f""""We have a report from people of the glass factory floor and we need to extract data in json format in the following order: time(24 format), type_of_incident, location, if appliable the solution of that problem, and the shift. The shift normally is a letter A,B,C,D. The location two letters that represent the factory, number of the oven, the line, the section and the concavity, that is a letter A B or C. The keys must be in english but the data remains in the original language of input. The solution type and the problem type must be a short description in the language of input. The data should be in present tense.
+	""""We have a report from people of the glass factory floor and we need to extract data in json format in the following order: time(24 format), type_of_incident, location, if appliable the solution of that problem, and the shift. The shift normally is a letter A,B,C,D. The location two letters that represent the factory, number of the oven, the line, the section and the concavity, that is a letter A B or C. The keys must be in english but the data remains in the original language of input. The solution type and the problem type must be a short description in the language of input. The data should be in present tense.
 
-from flask import Flask  # Import the Flask module
 
 Provide a summary with about two sentences for the following article: Ocorreu um erro nas mangueiras de assentamento do AV538C e paramos a producao para corrigir
 Summary: ```json
@@ -391,11 +391,13 @@ credentials = service_account.Credentials.from_service_account_file(
 storage_client = storage.Client(credentials=credentials)
 @app.route('/get-access-token')
 def get_access_token():
-    try:
-        request = google.auth.transport.requests.Request()
-        credentials.refresh(request)
-        return jsonify({'access_token': credentials.token})
-    except google.auth.exceptions.RefreshError a
+	try:
+		request = google.auth.transport.requests.Request()
+		credentials.refresh(request)
+		return jsonify({'access_token': credentials.token})
+	except google.auth.exceptions.RefreshError as e:
+		return jsonify({'error': str(e)}), 500
+
 ##################################################################
 ############################# Install db #########################
 ##################################################################
