@@ -15,7 +15,7 @@ function enviarAudioParaServidor(blob) {
     let worker_number = document.getElementById('workerNumberInput').value;
     formData.append('worker_number', worker_number);
 
-    fetch('http://localhost:5000/upload-recorded', {
+    fetch('http://localhost:5000/upload', {
         method: 'POST',
         body: formData
     })
