@@ -1,0 +1,67 @@
+We have a report from people of the glass factory floor and we need to extract data in json format in the following order: time(24 format), shift(The shift normally is a letter A,B,C,D(A 00:00 to 6:30, B 06:00-12:30, C 12:00-18:30, D 18:30-00:00)), incident, if appliable resolution and if appliable if there was any interruption to the production.The location two letters that represent the factory, number of the oven, the line, the section and the concavity, that is a letter A B or C. The keys must be in english but the data remains in the original language of input. The solution type and the problem type must be a short description in the language of input.
+
+input: No meio do turno D, por volta das 08:30 da noite, na seção AV376D, houve uma interrupção devido a problemas com as válvulas FPS. Aguardamos a substituição das válvulas para retomar as operações.
+output: ```json
+{
+  \"time\": \"20:30\",
+  \"shift\": \"D\",
+  \"incident\": \"Problemas com as válvulas FPS\",
+  \"resolution\": \"Substiuição das válvulas\",
+  \"interruption\": \"Paragem de linha\",
+  \"location\": \"AV376D\"
+}
+```
+
+
+input: Durante o turno A, por volta das 01:10 da madrugada, na área AV231B, enfrentamos problemas informáticos após atualização. Realizamos uma verificação completa dos sistemas e reiniciamos as operações.
+output: ```json
+{
+  \"time\": \"01:10\",
+  \"shift\": \"A\",
+  \"incident\": \"Problemas informáticos após atualização\",
+  \"resolution\": Verificação e reinício dos sistemas\",
+  \"interruption\": \"Paragem de linha\",
+  \"location\": \"AV231B\"
+}
+```
+
+
+input: Durante o turno A, por volta das 06:45 da manhã, na concavidade 3D da AV54, ocorreu um encravamento da máquina devido à má distribuição de vidro. Realizamos ajustes na máquina e limpamos a área afetada.
+output: ```json
+{
+  \"time\": \"06:45\",
+  \"shift\": \"A\",
+  \"incident\": \"Encravamento da máquina\",
+  \"resolution\": \"Ajustes na máquina e limpeza da área afetada\",
+  \"interruption\": \"Paragem de máquina\",
+  \"location\": \"AV543D\"
+}
+```
+
+
+input: Por volta das 07:30 da noite, durante o turno B, na seção AV547C, o chiller do BTC apresentava excesso de temperatura há 3 dias. Realizamos uma purga do circuito de ar do arrefecimento e monitoramos a temperatura de perto.
+output: ```json
+{
+  \"time\": \"19:30\",
+  \"shift\": \"B\",
+  \"incident\": \"Excesso de temperatura no chiller do BTC\",
+  \"resolution\": \"Purga do circuito de ar de arrefecimento\",
+  \"interruption\": \"Não\",
+  \"location\": \"AV547C\"
+}
+```
+
+
+input: as 18 horas foi detetado uma discrepancia na gota da linha av54, foi realizada uma paragem para realinhar e retomada a producao
+output: ```json
+{
+  \"time\": \"18:00\",
+  \"shift\": \"C\",
+  \"incident\": \"Discrepância na gota da linha\",
+  \"resolution\": \"Realinhamento\",
+  \"interruption\": \"Paragem de linha\",
+  \"location\": \"AV54\"
+}
+```
+
+input:

@@ -1,0 +1,906 @@
+02/22/2024 01:08:31 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 01:08:31 PM [33mPress CTRL+C to quit[0m
+02/22/2024 02:09:36 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 02:10:20 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 02:12:48 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 02:12:48 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 02:12:48 PM [33mPress CTRL+C to quit[0m
+02/22/2024 02:13:17 PM 127.0.0.1 - - [22/Feb/2024 14:13:17] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:13:29 PM 127.0.0.1 - - [22/Feb/2024 14:13:29] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:13:30 PM 127.0.0.1 - - [22/Feb/2024 14:13:30] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:13:48 PM 127.0.0.1 - - [22/Feb/2024 14:13:48] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:15:51 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 02:15:51 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 02:15:51 PM [33mPress CTRL+C to quit[0m
+02/22/2024 02:16:02 PM 127.0.0.1 - - [22/Feb/2024 14:16:02] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:16:12 PM 127.0.0.1 - - [22/Feb/2024 14:16:12] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:30:16 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 02:30:16 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 02:30:16 PM [33mPress CTRL+C to quit[0m
+02/22/2024 02:30:36 PM 127.0.0.1 - - [22/Feb/2024 14:30:36] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:30:42 PM 127.0.0.1 - - [22/Feb/2024 14:30:42] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:30:42 PM 127.0.0.1 - - [22/Feb/2024 14:30:42] "OPTIONS /upload-recorded HTTP/1.1" 200 -
+02/22/2024 02:30:44 PM Exception on /upload-recorded [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 873, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 892, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1164, in make_response
+    raise TypeError(
+TypeError: The view function for 'upload_recorded' did not return a valid response. The function either returned None or ended without a return statement.
+02/22/2024 02:30:44 PM 127.0.0.1 - - [22/Feb/2024 14:30:44] "[35m[1mPOST /upload-recorded HTTP/1.1[0m" 500 -
+02/22/2024 02:31:53 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 02:31:53 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 02:31:53 PM [33mPress CTRL+C to quit[0m
+02/22/2024 02:32:01 PM 127.0.0.1 - - [22/Feb/2024 14:32:01] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:32:04 PM 127.0.0.1 - - [22/Feb/2024 14:32:04] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:32:04 PM 127.0.0.1 - - [22/Feb/2024 14:32:04] "OPTIONS /upload-recorded HTTP/1.1" 200 -
+02/22/2024 02:32:08 PM 127.0.0.1 - - [22/Feb/2024 14:32:08] "POST /upload-recorded HTTP/1.1" 200 -
+02/22/2024 02:34:11 PM 127.0.0.1 - - [22/Feb/2024 14:34:11] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:34:14 PM 127.0.0.1 - - [22/Feb/2024 14:34:14] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:34:14 PM 127.0.0.1 - - [22/Feb/2024 14:34:14] "OPTIONS /upload-recorded HTTP/1.1" 200 -
+02/22/2024 02:34:15 PM 127.0.0.1 - - [22/Feb/2024 14:34:15] "POST /upload-recorded HTTP/1.1" 200 -
+02/22/2024 02:57:17 PM 127.0.0.1 - - [22/Feb/2024 14:57:17] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:57:18 PM 127.0.0.1 - - [22/Feb/2024 14:57:18] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:58:16 PM 127.0.0.1 - - [22/Feb/2024 14:58:16] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:58:16 PM 127.0.0.1 - - [22/Feb/2024 14:58:16] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:58:16 PM 127.0.0.1 - - [22/Feb/2024 14:58:16] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:58:17 PM 127.0.0.1 - - [22/Feb/2024 14:58:17] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 02:58:17 PM 127.0.0.1 - - [22/Feb/2024 14:58:17] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:09:58 PM 127.0.0.1 - - [22/Feb/2024 15:09:58] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:20:32 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 03:20:32 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 03:20:32 PM [33mPress CTRL+C to quit[0m
+02/22/2024 03:25:03 PM 127.0.0.1 - - [22/Feb/2024 15:25:03] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:32:47 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 03:32:47 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 03:32:47 PM [33mPress CTRL+C to quit[0m
+02/22/2024 03:32:49 PM 127.0.0.1 - - [22/Feb/2024 15:32:49] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:32:51 PM 127.0.0.1 - - [22/Feb/2024 15:32:51] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:32:54 PM 127.0.0.1 - - [22/Feb/2024 15:32:54] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:36:18 PM 127.0.0.1 - - [22/Feb/2024 15:36:18] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:36:18 PM 127.0.0.1 - - [22/Feb/2024 15:36:18] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:36:19 PM 127.0.0.1 - - [22/Feb/2024 15:36:19] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:36:19 PM 127.0.0.1 - - [22/Feb/2024 15:36:19] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:37:07 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 03:37:07 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 03:37:07 PM [33mPress CTRL+C to quit[0m
+02/22/2024 03:37:12 PM 127.0.0.1 - - [22/Feb/2024 15:37:12] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:37:12 PM 127.0.0.1 - - [22/Feb/2024 15:37:12] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:37:12 PM 127.0.0.1 - - [22/Feb/2024 15:37:12] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:37:12 PM 127.0.0.1 - - [22/Feb/2024 15:37:12] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 03:58:06 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 03:58:06 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 03:58:06 PM [33mPress CTRL+C to quit[0m
+02/22/2024 03:58:32 PM 127.0.0.1 - - [22/Feb/2024 15:58:32] "OPTIONS /upload-recorded HTTP/1.1" 200 -
+02/22/2024 03:58:34 PM 127.0.0.1 - - [22/Feb/2024 15:58:34] "POST /upload-recorded HTTP/1.1" 200 -
+02/22/2024 04:00:08 PM 127.0.0.1 - - [22/Feb/2024 16:00:08] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:20:31 PM 127.0.0.1 - - [22/Feb/2024 16:20:31] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:36:42 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 04:36:42 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 04:36:42 PM [33mPress CTRL+C to quit[0m
+02/22/2024 04:36:59 PM Exception on /upload-form [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 367, in upload_form
+    upload(file.read(), file.content_type)
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 362, in upload
+    create_db_entry(filename, datetime.now(), {1})
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 332, in create_db_entry
+    conn = psycopg2.connect(**db_credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+02/22/2024 04:36:59 PM 127.0.0.1 - - [22/Feb/2024 16:36:59] "[35m[1mPOST /upload-form HTTP/1.1[0m" 500 -
+02/22/2024 04:36:59 PM Exception on /upload-form [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 367, in upload_form
+    upload(file.read(), file.content_type)
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 362, in upload
+    create_db_entry(filename, datetime.now(), {1})
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 332, in create_db_entry
+    conn = psycopg2.connect(**db_credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+02/22/2024 04:36:59 PM 127.0.0.1 - - [22/Feb/2024 16:36:59] "[35m[1mPOST /upload-form HTTP/1.1[0m" 500 -
+02/22/2024 04:37:00 PM Exception on /upload-form [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 367, in upload_form
+    upload(file.read(), file.content_type)
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 362, in upload
+    create_db_entry(filename, datetime.now(), {1})
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 332, in create_db_entry
+    conn = psycopg2.connect(**db_credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+02/22/2024 04:37:00 PM 127.0.0.1 - - [22/Feb/2024 16:37:00] "[35m[1mPOST /upload-form HTTP/1.1[0m" 500 -
+02/22/2024 04:37:00 PM Exception on /upload-form [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 367, in upload_form
+    upload(file.read(), file.content_type)
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 362, in upload
+    create_db_entry(filename, datetime.now(), {1})
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 332, in create_db_entry
+    conn = psycopg2.connect(**db_credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+02/22/2024 04:37:00 PM 127.0.0.1 - - [22/Feb/2024 16:37:00] "[35m[1mPOST /upload-form HTTP/1.1[0m" 500 -
+02/22/2024 04:37:04 PM Exception on /upload-form [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 367, in upload_form
+    upload(file.read(), file.content_type)
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 362, in upload
+    create_db_entry(filename, datetime.now(), {1})
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 332, in create_db_entry
+    conn = psycopg2.connect(**db_credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+02/22/2024 04:37:04 PM 127.0.0.1 - - [22/Feb/2024 16:37:04] "[35m[1mPOST /upload-form HTTP/1.1[0m" 500 -
+02/22/2024 04:38:21 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 04:38:22 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 04:38:22 PM [33mPress CTRL+C to quit[0m
+02/22/2024 04:38:48 PM 127.0.0.1 - - [22/Feb/2024 16:38:48] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:40:42 PM 127.0.0.1 - - [22/Feb/2024 16:40:42] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:40:44 PM 127.0.0.1 - - [22/Feb/2024 16:40:44] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:41:43 PM 127.0.0.1 - - [22/Feb/2024 16:41:43] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:41:46 PM 127.0.0.1 - - [22/Feb/2024 16:41:46] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:42:01 PM 127.0.0.1 - - [22/Feb/2024 16:42:01] "POST /upload-recorded HTTP/1.1" 200 -
+02/22/2024 04:45:15 PM 127.0.0.1 - - [22/Feb/2024 16:45:15] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:45:20 PM 127.0.0.1 - - [22/Feb/2024 16:45:20] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:45:21 PM 127.0.0.1 - - [22/Feb/2024 16:45:21] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:45:22 PM 127.0.0.1 - - [22/Feb/2024 16:45:22] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:45:22 PM 127.0.0.1 - - [22/Feb/2024 16:45:22] "POST /upload-recorded HTTP/1.1" 200 -
+02/22/2024 04:45:24 PM 127.0.0.1 - - [22/Feb/2024 16:45:24] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:45:24 PM 127.0.0.1 - - [22/Feb/2024 16:45:24] "POST /upload-recorded HTTP/1.1" 200 -
+02/22/2024 04:45:25 PM 127.0.0.1 - - [22/Feb/2024 16:45:25] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:45:27 PM 127.0.0.1 - - [22/Feb/2024 16:45:27] "POST /upload-recorded HTTP/1.1" 200 -
+02/22/2024 04:45:27 PM 127.0.0.1 - - [22/Feb/2024 16:45:27] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:46:47 PM 127.0.0.1 - - [22/Feb/2024 16:46:47] "[33mPOST /upload HTTP/1.1[0m" 404 -
+02/22/2024 04:47:06 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 04:47:06 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 04:47:06 PM [33mPress CTRL+C to quit[0m
+02/22/2024 04:47:17 PM 127.0.0.1 - - [22/Feb/2024 16:47:17] "POST /upload HTTP/1.1" 200 -
+02/22/2024 04:47:23 PM 127.0.0.1 - - [22/Feb/2024 16:47:23] "POST /upload HTTP/1.1" 200 -
+02/22/2024 04:50:00 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 04:50:01 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 04:50:01 PM [33mPress CTRL+C to quit[0m
+02/22/2024 04:50:14 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 04:50:14 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 04:50:14 PM [33mPress CTRL+C to quit[0m
+02/22/2024 04:50:28 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 368, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+                                           ^^^^^^^^^^^^^
+NameError: name 'worker_number' is not defined
+02/22/2024 04:50:28 PM 127.0.0.1 - - [22/Feb/2024 16:50:28] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 04:50:30 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 368, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+                                           ^^^^^^^^^^^^^
+NameError: name 'worker_number' is not defined
+02/22/2024 04:50:30 PM 127.0.0.1 - - [22/Feb/2024 16:50:30] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 04:51:03 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 368, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+                                           ^^^^^^^^^^^^^
+NameError: name 'worker_number' is not defined
+02/22/2024 04:51:03 PM 127.0.0.1 - - [22/Feb/2024 16:51:03] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 04:51:55 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 368, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+                                           ^^^^^^^^^^^^^
+NameError: name 'worker_number' is not defined
+02/22/2024 04:51:55 PM 127.0.0.1 - - [22/Feb/2024 16:51:55] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 04:52:02 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 368, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+                                           ^^^^^^^^^^^^^
+NameError: name 'worker_number' is not defined
+02/22/2024 04:52:02 PM 127.0.0.1 - - [22/Feb/2024 16:52:02] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 04:52:03 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 368, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+                                           ^^^^^^^^^^^^^
+NameError: name 'worker_number' is not defined
+02/22/2024 04:52:03 PM 127.0.0.1 - - [22/Feb/2024 16:52:03] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 04:52:03 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 368, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+                                           ^^^^^^^^^^^^^
+NameError: name 'worker_number' is not defined
+02/22/2024 04:52:03 PM 127.0.0.1 - - [22/Feb/2024 16:52:03] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 04:52:55 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 04:52:55 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 04:52:55 PM [33mPress CTRL+C to quit[0m
+02/22/2024 04:53:06 PM 127.0.0.1 - - [22/Feb/2024 16:53:06] "POST /upload HTTP/1.1" 200 -
+02/22/2024 04:53:07 PM 127.0.0.1 - - [22/Feb/2024 16:53:07] "POST /upload HTTP/1.1" 200 -
+02/22/2024 04:55:10 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 04:55:10 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 04:55:10 PM [33mPress CTRL+C to quit[0m
+02/22/2024 04:55:15 PM 127.0.0.1 - - [22/Feb/2024 16:55:15] "POST /upload HTTP/1.1" 200 -
+02/22/2024 04:55:15 PM 127.0.0.1 - - [22/Feb/2024 16:55:15] "POST /upload HTTP/1.1" 200 -
+02/22/2024 04:55:15 PM 127.0.0.1 - - [22/Feb/2024 16:55:15] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:00:18 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 05:00:18 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 05:00:18 PM [33mPress CTRL+C to quit[0m
+02/22/2024 05:00:24 PM 127.0.0.1 - - [22/Feb/2024 17:00:24] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:00:24 PM 127.0.0.1 - - [22/Feb/2024 17:00:24] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:00:24 PM 127.0.0.1 - - [22/Feb/2024 17:00:24] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:01:22 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 05:01:23 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 05:01:23 PM [33mPress CTRL+C to quit[0m
+02/22/2024 05:01:24 PM 127.0.0.1 - - [22/Feb/2024 17:01:24] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:01:28 PM 127.0.0.1 - - [22/Feb/2024 17:01:28] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:01:28 PM 127.0.0.1 - - [22/Feb/2024 17:01:28] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:01:58 PM 127.0.0.1 - - [22/Feb/2024 17:01:58] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:02:14 PM 127.0.0.1 - - [22/Feb/2024 17:02:14] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:02:19 PM 127.0.0.1 - - [22/Feb/2024 17:02:19] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:02:20 PM 127.0.0.1 - - [22/Feb/2024 17:02:20] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:03:51 PM 127.0.0.1 - - [22/Feb/2024 17:03:51] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:04:10 PM 127.0.0.1 - - [22/Feb/2024 17:04:10] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:04:10 PM 127.0.0.1 - - [22/Feb/2024 17:04:10] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:04:55 PM 127.0.0.1 - - [22/Feb/2024 17:04:55] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:04 PM 127.0.0.1 - - [22/Feb/2024 17:05:04] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:07 PM 127.0.0.1 - - [22/Feb/2024 17:05:07] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:07 PM 127.0.0.1 - - [22/Feb/2024 17:05:07] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:47 PM 127.0.0.1 - - [22/Feb/2024 17:05:47] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:52 PM 127.0.0.1 - - [22/Feb/2024 17:05:52] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:52 PM 127.0.0.1 - - [22/Feb/2024 17:05:52] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:53 PM 127.0.0.1 - - [22/Feb/2024 17:05:53] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:53 PM 127.0.0.1 - - [22/Feb/2024 17:05:53] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:53 PM 127.0.0.1 - - [22/Feb/2024 17:05:53] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:06:55 PM 127.0.0.1 - - [22/Feb/2024 17:06:55] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:07:06 PM 127.0.0.1 - - [22/Feb/2024 17:07:06] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:42:52 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 05:42:52 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 05:42:52 PM [33mPress CTRL+C to quit[0m
+02/22/2024 05:43:35 PM 127.0.0.1 - - [22/Feb/2024 17:43:35] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:43:47 PM 127.0.0.1 - - [22/Feb/2024 17:43:47] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:43:50 PM 127.0.0.1 - - [22/Feb/2024 17:43:50] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:43:51 PM 127.0.0.1 - - [22/Feb/2024 17:43:51] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:43:52 PM 127.0.0.1 - - [22/Feb/2024 17:43:52] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:43:52 PM 127.0.0.1 - - [22/Feb/2024 17:43:52] "POST /upload HTTP/1.1" 200 -
+02/22/2024 07:37:10 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 07:37:10 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 07:37:10 PM [33mPress CTRL+C to quit[0m
+02/22/2024 07:58:04 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 07:58:04 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 07:58:04 PM [33mPress CTRL+C to quit[0m
+02/22/2024 07:58:27 PM 127.0.0.1 - - [22/Feb/2024 19:58:27] "POST /upload HTTP/1.1" 200 -
+02/22/2024 07:58:51 PM 127.0.0.1 - - [22/Feb/2024 19:58:51] "POST /upload HTTP/1.1" 200 -
+02/22/2024 08:17:13 PM 127.0.0.1 - - [22/Feb/2024 20:17:13] "POST /upload HTTP/1.1" 200 -
+02/22/2024 08:19:42 PM 127.0.0.1 - - [22/Feb/2024 20:19:42] "POST /upload HTTP/1.1" 200 -
+02/22/2024 08:24:33 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 08:24:33 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 08:24:33 PM [33mPress CTRL+C to quit[0m
+02/22/2024 08:24:36 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 08:24:37 PM 127.0.0.1 - - [22/Feb/2024 20:24:37] "POST /upload HTTP/1.1" 200 -
+02/22/2024 08:26:14 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 08:26:14 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 08:26:14 PM [33mPress CTRL+C to quit[0m
+02/22/2024 08:26:16 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 08:26:17 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 284, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 277, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 90, in generate_summary_and_save_to_db
+    with open(prompt.txt, "r") as prompt_file:
+              ^^^^^^
+UnboundLocalError: cannot access local variable 'prompt' where it is not associated with a value
+02/22/2024 08:26:17 PM 127.0.0.1 - - [22/Feb/2024 20:26:17] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 08:27:18 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 08:27:19 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 284, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 277, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 90, in generate_summary_and_save_to_db
+    with open(prompt.txt, "r") as prompt_file:
+              ^^^^^^
+UnboundLocalError: cannot access local variable 'prompt' where it is not associated with a value
+02/22/2024 08:27:19 PM 127.0.0.1 - - [22/Feb/2024 20:27:19] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 08:28:55 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 08:28:55 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 08:28:55 PM [33mPress CTRL+C to quit[0m
+02/22/2024 08:28:58 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 08:28:59 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 289, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 282, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 93, in generate_summary_and_save_to_db
+    with open(prompt.txt, "r") as prompt_file:
+              ^^^^^^
+UnboundLocalError: cannot access local variable 'prompt' where it is not associated with a value
+02/22/2024 08:28:59 PM 127.0.0.1 - - [22/Feb/2024 20:28:59] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 09:02:31 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:02:31 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:02:31 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:02:41 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:02:41 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:02:41 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:02:43 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:02:46 PM 127.0.0.1 - - [22/Feb/2024 21:02:46] "POST /upload HTTP/1.1" 200 -
+02/22/2024 09:04:34 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:04:34 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:04:34 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:04:36 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:04:39 PM 127.0.0.1 - - [22/Feb/2024 21:04:39] "POST /upload HTTP/1.1" 200 -
+02/22/2024 09:07:35 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:07:35 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:07:35 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:07:38 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:07:41 PM 127.0.0.1 - - [22/Feb/2024 21:07:41] "POST /upload HTTP/1.1" 200 -
+02/22/2024 09:10:21 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:10:21 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:10:21 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:10:24 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:10:27 PM 127.0.0.1 - - [22/Feb/2024 21:10:27] "POST /upload HTTP/1.1" 200 -
+02/22/2024 09:11:17 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:11:17 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:11:17 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:11:37 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:11:40 PM 127.0.0.1 - - [22/Feb/2024 21:11:40] "POST /upload HTTP/1.1" 200 -
+02/22/2024 09:13:22 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:13:22 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:13:22 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:13:24 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:13:26 PM 127.0.0.1 - - [22/Feb/2024 21:13:26] "POST /upload HTTP/1.1" 200 -
+02/22/2024 09:13:44 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:13:44 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:13:44 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:13:46 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:13:49 PM 127.0.0.1 - - [22/Feb/2024 21:13:49] "POST /upload HTTP/1.1" 200 -
+02/22/2024 09:19:01 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:19:01 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:19:01 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:19:12 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:19:15 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 295, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 288, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 104, in generate_summary_and_save_to_db
+    output_alertdata_to_db(filename, response.text["answer"])
+                                     ~~~~~~~~~~~~~^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+02/22/2024 09:19:15 PM 127.0.0.1 - - [22/Feb/2024 21:19:15] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 09:20:02 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:20:02 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:20:02 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:20:04 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:20:06 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 297, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 290, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 104, in generate_summary_and_save_to_db
+    result = response.text["answer"]
+             ~~~~~~~~~~~~~^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+02/22/2024 09:20:06 PM 127.0.0.1 - - [22/Feb/2024 21:20:06] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 09:21:43 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:21:43 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:21:43 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:21:48 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:21:49 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 76, in error_remapped_callable
+    return callable_(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/grpc/_channel.py", line 1176, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/grpc/_channel.py", line 1005, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "The text content is empty."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.250.184.170:443 {created_time:"2024-02-22T21:21:49.568775685+00:00", grpc_status:3, grpc_message:"The text content is empty."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 297, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 290, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 101, in generate_summary_and_save_to_db
+    response = model.predict([prompt], **parameters)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/vertexai/language_models/_language_models.py", line 1318, in predict
+    prediction_response = self._endpoint.predict(
+                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/cloud/aiplatform/models.py", line 1579, in predict
+    prediction_response = self._prediction_client.predict(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 831, in predict
+    response = rpc(
+               ^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 The text content is empty.
+02/22/2024 09:21:49 PM 127.0.0.1 - - [22/Feb/2024 21:21:49] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 09:23:12 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:23:12 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:23:12 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:23:13 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:23:16 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 297, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 290, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 103, in generate_summary_and_save_to_db
+    result = response.text.split("output:")[1]
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+02/22/2024 09:23:16 PM 127.0.0.1 - - [22/Feb/2024 21:23:16] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 09:23:36 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:23:36 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:23:36 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:23:41 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:23:44 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 297, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 290, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 103, in generate_summary_and_save_to_db
+    result = response.text.split("answer:")[1]
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+02/22/2024 09:23:44 PM 127.0.0.1 - - [22/Feb/2024 21:23:44] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 09:25:00 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:25:00 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:25:00 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:25:10 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:25:12 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 298, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 291, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 103, in generate_summary_and_save_to_db
+    response_json = json.loads(response.text)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 2 (char 1)
+02/22/2024 09:25:12 PM 127.0.0.1 - - [22/Feb/2024 21:25:12] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 09:27:33 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:27:33 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:27:33 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:27:34 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:27:35 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:27:37 PM 127.0.0.1 - - [22/Feb/2024 21:27:37] "POST /upload HTTP/1.1" 200 -
+02/22/2024 09:27:37 PM 127.0.0.1 - - [22/Feb/2024 21:27:37] "POST /upload HTTP/1.1" 200 -
+02/22/2024 09:31:47 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:31:47 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:31:47 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:31:49 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:31:52 PM 127.0.0.1 - - [22/Feb/2024 21:31:52] "POST /upload HTTP/1.1" 200 -
+02/22/2024 09:32:19 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:32:19 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 09:32:19 PM [33mPress CTRL+C to quit[0m
+02/22/2024 09:32:28 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 09:32:31 PM 127.0.0.1 - - [22/Feb/2024 21:32:31] "POST /upload HTTP/1.1" 200 -

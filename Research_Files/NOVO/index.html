@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload</title>
+</head>
+<body>
+    <form id="uploadForm">
+        <input type="file" id="audio" accept="audio/*">
+        <button type="submit">Upload</button>
+    </form>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let fileInput = document.getElementById('audio');
+            let file = fileInput.files[0];
+            let filename = "your_filename_here";
+            let data = {
+                filename: filename
+            };
+
+            fetch('https://34.134.1.128:5000/processManualUpload', {
+			    method: 'POST',
+			    headers: {
+			        'Content-Type': 'application/json'
+			    },
+			    body: JSON.stringify(data)
+			})
+			.then(response => {
+			    if (!response.ok) {
+			        throw new Error('Network response was not ok');
+			    }
+			    return response.json();
+			})
+			.then(data => console.log(data))
+			.catch((error) => {
+			    console.error('Error:', error);
+			});
+        });
+    </script>
+</body>
+</html>
