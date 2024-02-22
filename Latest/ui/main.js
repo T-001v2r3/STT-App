@@ -13,7 +13,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
         mediaRecorder.onstop = function(e) {
             let blob = new Blob(chunks, { 'type' : 'audio/webm;codecs=pcm' });
             chunks = [];
-        
+
             // Fetch a fresh access token from Flask server
             fetch('/get-access-token')
                 .then(response => response.json())
@@ -24,12 +24,12 @@ navigator.mediaDevices.getUserMedia({ audio: true })
                         .then(response => response.json())
                         .then(data => {
                             let filename = data.filename;
-            
+
                             // Upload file to Google Cloud Bucket
                             let formData = new FormData();
                             formData.append('audio', blob, filename);
                             fetch(`https://storage.googleapis.com/upload/storage/v1/b/ba-report-bucket/o?uploadType=media&name=${filename}`, {
-                                method: 'POST', 
+                                method: 'POST',
                                 body: formData,
                                 headers: {
                                     Authorization: `Bearer ${accessToken}`
@@ -41,7 +41,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
                                 }
                                 // Call next step
                                 fetch('http://localhost:5000/request-transcribe', {
-                                    method: 'POST', 
+                                    method: 'POST',
                                     body: JSON.stringify({ filename: filename }),
                                     headers: { 'Content-Type': 'application/json' }
                                 })
@@ -51,7 +51,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
                         .catch(error => console.error(error));
                 })
                 .catch(error => console.error(error));
-        };        
+        };
     });
 
     recordButton.onclick = function() {
