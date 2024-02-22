@@ -12,8 +12,5 @@ def processManualUpload():
 	print(request.json)
 	return jsonify(message="Success")
 
-def main():
-	app.run(port=5000)
-
 if __name__ == '__main__':
-	main()
+	app.run(port=5000)
