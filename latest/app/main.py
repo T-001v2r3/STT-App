@@ -36,48 +36,6 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'application_default_credentials.
 ###################### ML Processing #############################
 ##################################################################
 
-# save the data on the alert table
-def db_alertdata_write(conn, filename, data):
-	print("Start alert data added to the table")
-	try:
-		cur = conn.cursor()
-		dbname = os.getenv('DB_NAME')
-		if dbname is None:
-			print("DB_NAME environment variable is not set")
-			return
-		# Convert the user_metadata set to a list and then to a JSON string
-		alert_metadata_json = json.dumps(list(data))
-		cur.execute(sql.SQL("""
-			UPDATE {} SET AlertMetadata = %s WHERE audiofilename = %s
-		""").format(sql.Identifier(dbname)), (alert_metadata_json, filename))
-	except Exception as e:
-		print("Error executing SQL query: ", e)
-		return
-	try:
-		conn.commit()
-	except Exception as e:
-		print("Error committing transaction: ", e)
-		return
-	print("Completed, alert data added to the table.")
-
-def output_alertdata_to_db(filename, data):
-	db_credentials = {
-		'host': os.getenv('DB_HOST'),
-		'port': os.getenv('DB_PORT'),
-		'user': os.getenv('DB_USER'),
-		'password': os.getenv('DB_PASS'),
-		'dbname': os.getenv('DB_NAME'),
-	}
-	print("Attempting to connect to the database...")
-	conn = psycopg2.connect(**db_credentials)
-	if conn:
-		print("Connected to the new database. Attempting to write alert data...")
-		print(f"Filename: {filename}")
-		print(f"Data: {data}")
-		db_alertdata_write(conn, filename, data)
-		print("Alert data written. Closing connection...")
-		conn.close()
-
 vertexai.init(project="ba-glass-hack24por-2011", location="europe-west9")
 parameters = {
 	"max_output_tokens": 256,
@@ -178,7 +136,48 @@ def log_action(action):
 ##################################################################
 ########################## DB ####################################
 ##################################################################
-	
+# save the ml result in db
+def db_alertdata_write(conn, filename, data):
+	print("Start alert data added to the table")
+	try:
+		cur = conn.cursor()
+		dbname = os.getenv('DB_NAME')
+		if dbname is None:
+			print("DB_NAME environment variable is not set")
+			return
+		# Convert the user_metadata set to a list and then to a JSON string
+		alert_metadata_json = json.dumps(list(data))
+		cur.execute(sql.SQL("""
+			UPDATE {} SET AlertMetadata = %s WHERE audiofilename = %s
+		""").format(sql.Identifier(dbname)), (alert_metadata_json, filename))
+	except Exception as e:
+		print("Error executing SQL query: ", e)
+		return
+	try:
+		conn.commit()
+	except Exception as e:
+		print("Error committing transaction: ", e)
+		return
+	print("Completed, alert data added to the table.")
+
+def output_alertdata_to_db(filename, data):
+	db_credentials = {
+		'host': os.getenv('DB_HOST'),
+		'port': os.getenv('DB_PORT'),
+		'user': os.getenv('DB_USER'),
+		'password': os.getenv('DB_PASS'),
+		'dbname': os.getenv('DB_NAME'),
+	}
+	print("Attempting to connect to the database...")
+	conn = psycopg2.connect(**db_credentials)
+	if conn:
+		print("Connected to the new database. Attempting to write alert data...")
+		print(f"Filename: {filename}")
+		print(f"Data: {data}")
+		db_alertdata_write(conn, filename, data)
+		print("Alert data written. Closing connection...")
+		conn.close()
+
 ######## Speech to text ########
 # save the data on the preprocessedtext table
 def db_preprocessedtext_write(conn, dbname, filename, data):

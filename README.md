@@ -54,17 +54,53 @@ They all work standalone under specific circuntances.
 - this includes the latest version of the work in progress files
 
 ### /latest/app/
+- this contains the app backend
+### /latest/app/application_default_credentials.json
+- not sure if we need this at the moment
 ### /latest/app/main.py
 - this program needs to be running.
 ### /latest/app/.env
 - credentials file
+### /latest/app/prompt.txt
+- previous genrated examples to feed the model
+- this content improves the quality of the output
 
 ### /latest/ui/
+- this contains the app frontend
 ### /latest/ui/index.html
 - this is the ui to input the audio.
+### /latest/ui/style.css
+- a complement of index.html to improve interface design
+### /latest/ui/main.js
+- a complement of index.html to increase functionalities
+### /latest/ui/imgs
+- images to feed the user interface
 
+### /latest/test_audio_files/
+- audio examples for testing purposes
+### /latest/test_audio_files/speech_brooklyn_bridge.flac
+- english language audio file example (source: google documentation)
+
+## Data Storage:
+We use the database to store the information gathered in the whole process.
+
+### Database Scheme:
+- EntryID, unique auto incremented number
+- Date and time of input;
+- Audio file name;
+- User Metadata, to identify the creator of this alert;
+- Preprocessed plain text retrived from the audio (google stt results);
+- Alert metadata, in here goes the ML model results;
+
+### Goggle Cloud Buckets
+- the place where the audio files get saved.
 
 # TO DO:
 - There is a lot to do this is just some of it:
 	- DELETE FROM database_name; needs to be done when the clean arg is passed;
 	- need to see why not creating db when insatll arg is passed;
+	- Need to move credentials and url's to the env file.
+	- make a config file
+	- add a language parameter on the ui and use it from there
+	- create ui for displaying the collected data
+	- verify if we need the json credentials file
