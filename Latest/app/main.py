@@ -9,7 +9,7 @@ import google.auth.exceptions
 import google.auth.transport.requests
 import argparse
 from flask import Flask, request
-from flask_cors import CORS
+#from flask_cors import CORS
 from datetime import datetime
 import os
 import logging
@@ -363,6 +363,17 @@ def decide_filename():
 		i += 1
 	print("filename: ", filename)
 	return {'filename': filename}, 200
+
+# Recive a signal when man upload
+@app.route('/processManualUpload', methods=['POST'])
+def processManualUpload():
+	filename = request.get_json()
+	print("partytime")
+	print("filename: ", filename)
+	
+	# save on db the log for each alert
+	now = datetime.now()
+	create_db_entry(filename, now, {1})
 
 # This is for the client to send the audio file to the server
 @app.route('/uploadForm', methods=['POST'])

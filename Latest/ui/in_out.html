@@ -24,10 +24,11 @@
             let fileInput = document.getElementById('audio');
             let file = fileInput.files[0];
             console.log("ola")
-            fetch('https://34.38.170.45:5000/decide-filename')
-            .then(response => response.json())
-            .then(data => {
-                let filename = data.filename;
+            //fetch('https://34.134.1.128:5000/decide-filename')
+            //.then(response => response.json())
+            //.then(data => {
+                //let filename = data.filename;
+                let filename = "mais_bananas.waaaave";
                 console.log(filename);
                 // Upload file to Google Cloud Storage
                 let formData = new FormData();
@@ -35,7 +36,7 @@
                 fetch(`https://storage.googleapis.com/upload/storage/v1/b/ba-report-bucket/o?uploadType=media&name=${filename}`, {
                     method: 'POST', 
                     body: formData,
-                    headers: {Authorization: 'Bearer ya29.a0AfB_byCBXz_MO11Csru1iZYXNfKrPMyH9i1eJD2mBhOSBfRfLnK6VIciI3QlQTjhHzEBpX0kcc42r9hfOK2WSUvKOaxuAEa4dWsvkIy82X5T3jX-rjenDuc0Ky_TNzAVqSkKFd6v0rJ733om2hg7rSR4vbVFRNsW1zeraCgYKAWISARESFQHGX2MijSptFrv9PlMRFss1281g2w0171'}
+                    headers: {Authorization: 'Bearer ya29.a0AfB_byDoMRrr_So6LsNr9HsBw54RP0gy9VVR1K7VlWJu-XqN8vofvtaYQWd6FV8yrGdd25bq7TNVs5tmE8Qg-zzXOWGv0vwYgyb82AsCR8xv28KB_fhifHEeAY2soH5Du17ZlEWJTQiJZz8uqZFa6ccGzrDKOqilp5zBaCgYKAQQSARESFQHGX2Mi26joEIm7lA3jYBT-Q7os2w0171'}
                 })
                 .then(response => {
                     if (!response.ok) {
@@ -45,10 +46,17 @@
                 .catch(error => {
                     console.error(error);
                 });
-            })
-            .catch(error => {
-                console.error(error);
-            });
+                fetch(`https://34.134.1.128:5000/processManualUpload`, {
+                    method: 'POST', 
+                    body: formData,
+                    headers: {
+                        filename: filename
+                    }
+                })
+            //})
+            //.catch(error => {
+            //    console.error(error);
+            //});
         });
     </script>
 </body>

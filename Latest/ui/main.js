@@ -15,20 +15,21 @@ navigator.mediaDevices.getUserMedia({ audio: true })
             chunks = [];
         
 
-                    // Get the decided filename from the server
-                    fetch('https://34.38.170.45:5000/decide-filename')  // Replace with your server's URL
-                        .then(response => response.json())
-                        .then(data => {
-                            let filename = data.filename;
+                    //// Get the decided filename from the server
+                    //fetch('https://34.134.1.128:5000/decide-filename')  // Replace with your server's URL
+                    //    .then(response => response.json())
+                    //    .then(data => {
+                    //        let filename = data.filename;
             
                             // Upload file to Google Cloud Bucket
                             let formData = new FormData();
+                            filename = "bananas.wav"
                             formData.append('audio', blob, filename);
                             fetch(`https://storage.googleapis.com/upload/storage/v1/b/ba-report-bucket/o?uploadType=media&name=${filename}`, {
                                 method: 'POST', 
                                 body: formData,
                                 headers: {
-                                    Authorization: `Bearer ${accessToken}`
+                                    Authorization: `Bearer`
                                 }
                             })
                             .then(response => {
@@ -36,15 +37,15 @@ navigator.mediaDevices.getUserMedia({ audio: true })
                                     throw new Error('Failed to upload file to Google Cloud Storage');
                                 }
                                 // Call next step
-                                fetch('https://34.38.170.45:5000/request-transcribe', {
+                                fetch('https://34.134.1.128:5000/request-transcribe', {
                                     method: 'POST', 
                                     body: JSON.stringify({ filename: filename }),
                                     headers: { 'Content-Type': 'application/json' }
                                 })
                             })
                             .catch(error => console.error(error));
-                        })
-                        .catch(error => console.error(error));
+                        //})
+                        //.catch(error => console.error(error));
         };        
     });
 

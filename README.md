@@ -1,6 +1,7 @@
 # Desciption:
 - We are bundling up everything at the Latest folder.
 - the app must be running in order for the html be accessed properly.
+- return do filename ta hardcoded no js p debug
 
 # In progress:
 - debuging the combined app:
