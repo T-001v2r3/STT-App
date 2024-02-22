@@ -1,10 +1,8 @@
 import os
 from flask import Flask, request
-from flask_cors import CORS
 from flask import jsonify
 
 app = Flask(__name__)
-CORS(app)
 
 @app.route('/processManualUpload', methods=['POST'])
 def processManualUpload():
