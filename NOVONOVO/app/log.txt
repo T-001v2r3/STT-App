@@ -90,3 +90,408 @@ TypeError: The view function for 'upload_recorded' did not return a valid respon
 02/22/2024 03:58:32 PM 127.0.0.1 - - [22/Feb/2024 15:58:32] "OPTIONS /upload-recorded HTTP/1.1" 200 -
 02/22/2024 03:58:34 PM 127.0.0.1 - - [22/Feb/2024 15:58:34] "POST /upload-recorded HTTP/1.1" 200 -
 02/22/2024 04:00:08 PM 127.0.0.1 - - [22/Feb/2024 16:00:08] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:20:31 PM 127.0.0.1 - - [22/Feb/2024 16:20:31] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:36:42 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 04:36:42 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 04:36:42 PM [33mPress CTRL+C to quit[0m
+02/22/2024 04:36:59 PM Exception on /upload-form [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 367, in upload_form
+    upload(file.read(), file.content_type)
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 362, in upload
+    create_db_entry(filename, datetime.now(), {1})
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 332, in create_db_entry
+    conn = psycopg2.connect(**db_credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+02/22/2024 04:36:59 PM 127.0.0.1 - - [22/Feb/2024 16:36:59] "[35m[1mPOST /upload-form HTTP/1.1[0m" 500 -
+02/22/2024 04:36:59 PM Exception on /upload-form [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 367, in upload_form
+    upload(file.read(), file.content_type)
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 362, in upload
+    create_db_entry(filename, datetime.now(), {1})
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 332, in create_db_entry
+    conn = psycopg2.connect(**db_credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+02/22/2024 04:36:59 PM 127.0.0.1 - - [22/Feb/2024 16:36:59] "[35m[1mPOST /upload-form HTTP/1.1[0m" 500 -
+02/22/2024 04:37:00 PM Exception on /upload-form [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 367, in upload_form
+    upload(file.read(), file.content_type)
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 362, in upload
+    create_db_entry(filename, datetime.now(), {1})
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 332, in create_db_entry
+    conn = psycopg2.connect(**db_credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+02/22/2024 04:37:00 PM 127.0.0.1 - - [22/Feb/2024 16:37:00] "[35m[1mPOST /upload-form HTTP/1.1[0m" 500 -
+02/22/2024 04:37:00 PM Exception on /upload-form [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 367, in upload_form
+    upload(file.read(), file.content_type)
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 362, in upload
+    create_db_entry(filename, datetime.now(), {1})
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 332, in create_db_entry
+    conn = psycopg2.connect(**db_credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+02/22/2024 04:37:00 PM 127.0.0.1 - - [22/Feb/2024 16:37:00] "[35m[1mPOST /upload-form HTTP/1.1[0m" 500 -
+02/22/2024 04:37:04 PM Exception on /upload-form [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 367, in upload_form
+    upload(file.read(), file.content_type)
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 362, in upload
+    create_db_entry(filename, datetime.now(), {1})
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 332, in create_db_entry
+    conn = psycopg2.connect(**db_credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+02/22/2024 04:37:04 PM 127.0.0.1 - - [22/Feb/2024 16:37:04] "[35m[1mPOST /upload-form HTTP/1.1[0m" 500 -
+02/22/2024 04:38:21 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 04:38:22 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 04:38:22 PM [33mPress CTRL+C to quit[0m
+02/22/2024 04:38:48 PM 127.0.0.1 - - [22/Feb/2024 16:38:48] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:40:42 PM 127.0.0.1 - - [22/Feb/2024 16:40:42] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:40:44 PM 127.0.0.1 - - [22/Feb/2024 16:40:44] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:41:43 PM 127.0.0.1 - - [22/Feb/2024 16:41:43] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:41:46 PM 127.0.0.1 - - [22/Feb/2024 16:41:46] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:42:01 PM 127.0.0.1 - - [22/Feb/2024 16:42:01] "POST /upload-recorded HTTP/1.1" 200 -
+02/22/2024 04:45:15 PM 127.0.0.1 - - [22/Feb/2024 16:45:15] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:45:20 PM 127.0.0.1 - - [22/Feb/2024 16:45:20] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:45:21 PM 127.0.0.1 - - [22/Feb/2024 16:45:21] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:45:22 PM 127.0.0.1 - - [22/Feb/2024 16:45:22] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:45:22 PM 127.0.0.1 - - [22/Feb/2024 16:45:22] "POST /upload-recorded HTTP/1.1" 200 -
+02/22/2024 04:45:24 PM 127.0.0.1 - - [22/Feb/2024 16:45:24] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:45:24 PM 127.0.0.1 - - [22/Feb/2024 16:45:24] "POST /upload-recorded HTTP/1.1" 200 -
+02/22/2024 04:45:25 PM 127.0.0.1 - - [22/Feb/2024 16:45:25] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:45:27 PM 127.0.0.1 - - [22/Feb/2024 16:45:27] "POST /upload-recorded HTTP/1.1" 200 -
+02/22/2024 04:45:27 PM 127.0.0.1 - - [22/Feb/2024 16:45:27] "POST /upload-form HTTP/1.1" 200 -
+02/22/2024 04:46:47 PM 127.0.0.1 - - [22/Feb/2024 16:46:47] "[33mPOST /upload HTTP/1.1[0m" 404 -
+02/22/2024 04:47:06 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 04:47:06 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 04:47:06 PM [33mPress CTRL+C to quit[0m
+02/22/2024 04:47:17 PM 127.0.0.1 - - [22/Feb/2024 16:47:17] "POST /upload HTTP/1.1" 200 -
+02/22/2024 04:47:23 PM 127.0.0.1 - - [22/Feb/2024 16:47:23] "POST /upload HTTP/1.1" 200 -
+02/22/2024 04:50:00 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 04:50:01 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 04:50:01 PM [33mPress CTRL+C to quit[0m
+02/22/2024 04:50:14 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 04:50:14 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 04:50:14 PM [33mPress CTRL+C to quit[0m
+02/22/2024 04:50:28 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 368, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+                                           ^^^^^^^^^^^^^
+NameError: name 'worker_number' is not defined
+02/22/2024 04:50:28 PM 127.0.0.1 - - [22/Feb/2024 16:50:28] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 04:50:30 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 368, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+                                           ^^^^^^^^^^^^^
+NameError: name 'worker_number' is not defined
+02/22/2024 04:50:30 PM 127.0.0.1 - - [22/Feb/2024 16:50:30] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 04:51:03 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 368, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+                                           ^^^^^^^^^^^^^
+NameError: name 'worker_number' is not defined
+02/22/2024 04:51:03 PM 127.0.0.1 - - [22/Feb/2024 16:51:03] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 04:51:55 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 368, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+                                           ^^^^^^^^^^^^^
+NameError: name 'worker_number' is not defined
+02/22/2024 04:51:55 PM 127.0.0.1 - - [22/Feb/2024 16:51:55] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 04:52:02 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 368, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+                                           ^^^^^^^^^^^^^
+NameError: name 'worker_number' is not defined
+02/22/2024 04:52:02 PM 127.0.0.1 - - [22/Feb/2024 16:52:02] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 04:52:03 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 368, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+                                           ^^^^^^^^^^^^^
+NameError: name 'worker_number' is not defined
+02/22/2024 04:52:03 PM 127.0.0.1 - - [22/Feb/2024 16:52:03] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 04:52:03 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\boop\novonovo\NOVONOVO\app\main.py", line 368, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+                                           ^^^^^^^^^^^^^
+NameError: name 'worker_number' is not defined
+02/22/2024 04:52:03 PM 127.0.0.1 - - [22/Feb/2024 16:52:03] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/22/2024 04:52:55 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 04:52:55 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 04:52:55 PM [33mPress CTRL+C to quit[0m
+02/22/2024 04:53:06 PM 127.0.0.1 - - [22/Feb/2024 16:53:06] "POST /upload HTTP/1.1" 200 -
+02/22/2024 04:53:07 PM 127.0.0.1 - - [22/Feb/2024 16:53:07] "POST /upload HTTP/1.1" 200 -
+02/22/2024 04:55:10 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 04:55:10 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 04:55:10 PM [33mPress CTRL+C to quit[0m
+02/22/2024 04:55:15 PM 127.0.0.1 - - [22/Feb/2024 16:55:15] "POST /upload HTTP/1.1" 200 -
+02/22/2024 04:55:15 PM 127.0.0.1 - - [22/Feb/2024 16:55:15] "POST /upload HTTP/1.1" 200 -
+02/22/2024 04:55:15 PM 127.0.0.1 - - [22/Feb/2024 16:55:15] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:00:18 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 05:00:18 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 05:00:18 PM [33mPress CTRL+C to quit[0m
+02/22/2024 05:00:24 PM 127.0.0.1 - - [22/Feb/2024 17:00:24] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:00:24 PM 127.0.0.1 - - [22/Feb/2024 17:00:24] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:00:24 PM 127.0.0.1 - - [22/Feb/2024 17:00:24] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:01:22 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/22/2024 05:01:23 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/22/2024 05:01:23 PM [33mPress CTRL+C to quit[0m
+02/22/2024 05:01:24 PM 127.0.0.1 - - [22/Feb/2024 17:01:24] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:01:28 PM 127.0.0.1 - - [22/Feb/2024 17:01:28] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:01:28 PM 127.0.0.1 - - [22/Feb/2024 17:01:28] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:01:58 PM 127.0.0.1 - - [22/Feb/2024 17:01:58] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:02:14 PM 127.0.0.1 - - [22/Feb/2024 17:02:14] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:02:19 PM 127.0.0.1 - - [22/Feb/2024 17:02:19] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:02:20 PM 127.0.0.1 - - [22/Feb/2024 17:02:20] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:03:51 PM 127.0.0.1 - - [22/Feb/2024 17:03:51] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:04:10 PM 127.0.0.1 - - [22/Feb/2024 17:04:10] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:04:10 PM 127.0.0.1 - - [22/Feb/2024 17:04:10] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:04:55 PM 127.0.0.1 - - [22/Feb/2024 17:04:55] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:04 PM 127.0.0.1 - - [22/Feb/2024 17:05:04] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:07 PM 127.0.0.1 - - [22/Feb/2024 17:05:07] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:07 PM 127.0.0.1 - - [22/Feb/2024 17:05:07] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:47 PM 127.0.0.1 - - [22/Feb/2024 17:05:47] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:52 PM 127.0.0.1 - - [22/Feb/2024 17:05:52] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:52 PM 127.0.0.1 - - [22/Feb/2024 17:05:52] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:53 PM 127.0.0.1 - - [22/Feb/2024 17:05:53] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:53 PM 127.0.0.1 - - [22/Feb/2024 17:05:53] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:05:53 PM 127.0.0.1 - - [22/Feb/2024 17:05:53] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:06:55 PM 127.0.0.1 - - [22/Feb/2024 17:06:55] "POST /upload HTTP/1.1" 200 -
+02/22/2024 05:07:06 PM 127.0.0.1 - - [22/Feb/2024 17:07:06] "POST /upload HTTP/1.1" 200 -

@@ -9,11 +9,15 @@ let mediaRecorder;
 
 // Envia áudio gravado para o servidor
 function enviarAudioParaServidor(blob) {
+    
+    let formData = new FormData();
+    formData.append('audio', blob);
+    let worker_number = document.getElementById('workerNumberInput').value;
+    formData.append('worker_number', worker_number);
 
-    // Send the audio blob to the Flask backend
-    fetch('http://localhost:5000/upload-recorded', { // Update the URL to your Flask backend endpoint
+    fetch('http://localhost:5000/upload', {
         method: 'POST',
-        body: blob
+        body: formData
     })
         .then(response => {
             if (!response.ok) {
@@ -60,6 +64,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
         console.error('Erro ao acessar o microfone:', error);
     });
 
+// Upload de ficheiro pelo form
 document.getElementById('uploadForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -77,7 +82,10 @@ document.getElementById('uploadForm').addEventListener('submit', function (event
     let formData = new FormData();
     formData.append('audio', file);
 
-    fetch('http://localhost:5000/upload-form', {
+    let worker_number = document.getElementById('workerNumberInput').value;
+    formData.append('worker_number', worker_number);
+
+    fetch('http://localhost:5000/upload', {
         method: 'POST',
         body: formData
     })
