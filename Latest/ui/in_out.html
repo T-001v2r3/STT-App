@@ -38,14 +38,30 @@
                 if (!response.ok) {
                     throw new Error('Failed to upload file to Google Cloud Storage');
                 }
-                // Create a new FormData object for the second request
-                let formData2 = new FormData();
-                formData2.append('filename', filename);
-                // Return the promise from the second fetch request
-                return fetch(`https://34.134.1.128:5000/processManualUpload`, {
-                    method: 'POST', 
-                    body: formData2
+                let data = {
+                    filename: "your_filename_here"
+                };
+
+                fetch('https://34.134.1.128:5000/processManualUpload', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch((error) => {
+                    console.error('Error:', error);
                 });
+                //// Create a new FormData object for the second request
+                //let formData2 = new FormData();
+                //formData2.append('filename', filename);
+                //// Return the promise from the second fetch request
+                //return fetch(`https://34.134.1.128:5000/processManualUpload`, {
+                //    method: 'POST', 
+                //    body: formData2
+                //});
             })
             .catch(error => {
                 console.error(error);
