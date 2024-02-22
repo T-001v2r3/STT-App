@@ -24,39 +24,32 @@
             let fileInput = document.getElementById('audio');
             let file = fileInput.files[0];
             console.log("ola")
-            //fetch('https://34.134.1.128:5000/decide-filename')
-            //.then(response => response.json())
-            //.then(data => {
-                //let filename = data.filename;
-                let filename = "mais_bananas.waaaave";
-                console.log(filename);
-                // Upload file to Google Cloud Storage
-                let formData = new FormData();
-                formData.append('audio', file, filename);
-                fetch(`https://storage.googleapis.com/upload/storage/v1/b/ba-report-bucket/o?uploadType=media&name=${filename}`, {
+            let filename = "mais_bananas.waaaave";
+            console.log(filename);
+            // Upload file to Google Cloud Storage
+            let formData = new FormData();
+            formData.append('audio', file, filename);
+            fetch(`https://storage.googleapis.com/upload/storage/v1/b/ba-report-bucket/o?uploadType=media&name=${filename}`, {
+                method: 'POST', 
+                body: formData,
+                headers: {Authorization: 'Bearer ya29.a0AfB_byDoMRrr_So6LsNr9HsBw54RP0gy9VVR1K7VlWJu-XqN8vofvtaYQWd6FV8yrGdd25bq7TNVs5tmE8Qg-zzXOWGv0vwYgyb82AsCR8xv28KB_fhifHEeAY2soH5Du17ZlEWJTQiJZz8uqZFa6ccGzrDKOqilp5zBaCgYKAQQSARESFQHGX2Mi26joEIm7lA3jYBT-Q7os2w0171'}
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to upload file to Google Cloud Storage');
+                }
+                // Create a new FormData object for the second request
+                let formData2 = new FormData();
+                formData2.append('filename', filename);
+                // Return the promise from the second fetch request
+                return fetch(`https://34.134.1.128:5000/processManualUpload`, {
                     method: 'POST', 
-                    body: formData,
-                    headers: {Authorization: 'Bearer ya29.a0AfB_byDoMRrr_So6LsNr9HsBw54RP0gy9VVR1K7VlWJu-XqN8vofvtaYQWd6FV8yrGdd25bq7TNVs5tmE8Qg-zzXOWGv0vwYgyb82AsCR8xv28KB_fhifHEeAY2soH5Du17ZlEWJTQiJZz8uqZFa6ccGzrDKOqilp5zBaCgYKAQQSARESFQHGX2Mi26joEIm7lA3jYBT-Q7os2w0171'}
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Failed to upload file to Google Cloud Storage');
-                    }
-                })
-                .catch(error => {
-                    console.error(error);
+                    body: formData2
                 });
-                fetch(`https://34.134.1.128:5000/processManualUpload`, {
-                    method: 'POST', 
-                    body: formData,
-                    headers: {
-                        filename: filename
-                    }
-                })
-            //})
-            //.catch(error => {
-            //    console.error(error);
-            //});
+            })
+            .catch(error => {
+                console.error(error);
+            });
         });
     </script>
 </body>
