@@ -1,5 +1,10 @@
 # Description:
 Docs in progress ...
+It includes an ui to read previously added data and an ui to input audio:
+- locahost:5001 to read
+- localhost to write
+both .py servers need to be running atm
+
 
 # Contents:
 - /latest/ Latest version, WIP directory
@@ -102,8 +107,12 @@ We use the database to store the information gathered in the whole process.
 	- Need to move credentials and url's to the env file.
 	- make a config file
 	- add a language parameter on the ui and use it from there
-	- create ui for displaying the collected data
+ - create a link between read and impit pages
+ - rework ui's so everything stays in place when the window is rescaled
 	- verify if we need the json credentials file
+- get a download link for each audio and add it on db and get it displsyed
+- combine .py servers
+
 
 SELECT * FROM "public"."new_database" LIMIT 1000;
 DELETE FROM new_database;
