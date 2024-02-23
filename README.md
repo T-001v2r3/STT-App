@@ -1,10 +1,19 @@
 # Description:
 Docs in progress ...
-It includes an ui to read previously added data and an ui to input audio:
-- locahost:5001 to read
-- localhost to write
-both .py servers need to be running atm
+It includes an ui to read previously added data and an ui to input audio.
 
+# Usage:
+Follow the steps in the right order:
+- install gcloud cli and authenticate
+- verify .env credentials
+- verify google cloud bucket credentials
+- run /latest/ui/read_data/app.py to start the app that enables read access to incident logs
+- access locahost:5001 to read incident logs
+- run /latest/app/main.py installdb to create the database, table and rows.
+- (optional) run /latest/app/main.py resetdb if you want to clean the db
+- run /latest/app/main.py to start the app
+that deals with the input interface
+- open /latest/ui/input_data/index.html to input an audio with a new incident
 
 # Contents:
 - /latest/ Latest version, WIP directory
@@ -13,6 +22,8 @@ both .py servers need to be running atm
 # Techinal info:
 ## Dependencies ( this may be incomplete):
 - google cloud cli connected to an account properly configured
+- a postgres database server
+- a google cloud bucket
 - pip install flask
 - pip install python-dotenv
 - pip install psycopg2
@@ -101,6 +112,8 @@ We use the database to store the information gathered in the whole process.
 - the place where the audio files get saved.
 
 # TO DO:
+- BUG! the response from ai gets saves an array with characters splited by arguments. nothing is lost, just needs to be tweaked. 
+- a new logic for response parsing/storing/organizing/tabling was in planning but isnt proplerly allogned or coded yet. maybe using a new db table and split the possible reported parameters and use ai to analise the data and fill in other parameters that may be concluded from the analisis like severity possible recomendations or risks that that report may cause.
 - There is a lot to do this is just some of it:
 	- DELETE FROM database_name; needs to be done when the clean arg is passed;
 	- need to see why not creating db when insatll arg is passed;
