@@ -1,3 +1,7 @@
+# Screenshots:
+![image](https://github.com/T-001v2r3/STT-App/assets/44624898/5e17db03-8648-496f-97ea-5e5a147052a3)
+![image](https://github.com/T-001v2r3/STT-App/assets/44624898/2c525c1a-ddde-4512-9018-3f7902690802)
+
 # Context:
 This project was developed during BA Glass Creative Labs event suported by Google.
 This project is work in progress.
