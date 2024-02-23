@@ -63,6 +63,8 @@ def generate_summary_and_save_to_db(report, filename):
 		response_json = response_json.replace("```json", "").replace("```", "").strip()
 		response_json = json.loads(response_json)
 		answer = response_json["answer"]
+		if isinstance(answer, list) and all(isinstance(i, list) for i in answer):
+			answer = ' '.join(''.join(i) for i in answer)
 		print(f"Answer: {answer}")
 	except Exception as e:
 		print(f"Error: {e}")
@@ -356,18 +358,24 @@ def run_install(clean):
 	}
 	dbname = os.getenv('DB_NAME')
 	print("Attempting to connect to the PostgreSQL server...")
-	conn = psycopg2.connect(**db_credentials)
-	conn.autocommit = True
 	if clean == 1:
+		conn = psycopg2.connect(**db_credentials)
+		conn.autocommit = True
 		print("Clean flag detected. Deleting and recreating the database...")
 		conn.autocommit = True  # set connection to autocommit mode
 		cur = conn.cursor()
-		cur.execute(sql.SQL("DROP DATABASE IF EXISTS {}").format(sql.Identifier(dbname)))
-		create_database(conn, dbname)
+		cur.execute(sql.SQL("DELETE FROM {}").format(sql.Identifier(dbname)))
 		print("Database created. Closing connection...")
 		conn.close()
 	else:
+		db_credentials['dbname'] = 'postgres'
+		conn = psycopg2.connect(**db_credentials)
+		conn.autocommit = True  # set connection to autocommit mode
+		cur = conn.cursor()
+		cur.execute(sql.SQL("CREATE DATABASE {}").format(sql.Identifier(dbname)))
 		print("Connected to the PostgreSQL server. Attempting to create database...")
+		db_credentials['dbname'] = dbname
+		conn = psycopg2.connect(**db_credentials)
 		create_database(conn, dbname)
 		print("Database created. Closing connection...")
 		conn.close()

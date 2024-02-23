@@ -104,3 +104,6 @@ We use the database to store the information gathered in the whole process.
 	- add a language parameter on the ui and use it from there
 	- create ui for displaying the collected data
 	- verify if we need the json credentials file
+
+SELECT * FROM "public"."new_database" LIMIT 1000;
+DELETE FROM new_database;

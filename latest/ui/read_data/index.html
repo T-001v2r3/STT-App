@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Incident Logs</title>
+	<style>
+        body {
+    		font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;  /* Set text color to white so it's visible on the black background */
+        }
+        .top-bar {
+            background-color: #A7C00D;
+            height: 100px;
+            position: relative;  /* Make the top-bar a positioning context for the icon */
+        }
+        .top-bar img {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);  /* Center the icon vertically */
+        }
+		.top-bar h1 {
+			flex-grow: 1;
+    		padding-left: 50px;  /* Adjust as needed */
+			justify-content: center;
+			align-items: center;
+			display: flex;
+		}
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <img src="{{ url_for('static', filename='imgs/baglass.png') }}" alt="Icon">
+		<h1>Incident logs</h1>  
+    </div>
+    <table>
+        <tr>
+            <th>EntryID</th>
+            <th>InputDateTime</th>
+            <th>AudioFileName</th>
+            <th>UserMetadata</th>
+            <th>PreprocessedText</th>
+            <th>AlertMetadata</th>
+        </tr>
+        {% for entry in entries %}
+        <tr>
+            <td>{{ entry.entryid }}</td>
+            <td>{{ entry.inputdatetime }}</td>
+            <td>{{ entry.audiofilename }}</td>
+            <td>{{ entry.usermetadata }}</td>
+            <td>{{ entry.preprocessedtext }}</td>
+            <td>{{ entry.alertmetadata }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
