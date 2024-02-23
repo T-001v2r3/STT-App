@@ -1,6 +1,10 @@
+# Context:
+This project was developed during BA Glass Creative Labs event suported by Google.
+This project is work in progress.
+
 # Description:
 Docs in progress ...
-It includes an ui to read previously added data and an ui to input audio.
+It includes an ui to read previously added data and an ui to input audio, as well a webserver for each interface.
 
 # Usage:
 Follow the steps in the right order:
@@ -81,15 +85,24 @@ They all work standalone under specific circuntances.
 - previous genrated examples to feed the model
 - this content improves the quality of the output
 
-### /latest/ui/
-- this contains the app frontend
-### /latest/ui/index.html
+### /latest/ui/input_data/
+- the app to input audio
+### /latest/ui/input_data/index.html
 - this is the ui to input the audio.
-### /latest/ui/style.css
+### /latest/ui/input_data/style.css
 - a complement of index.html to improve interface design
-### /latest/ui/main.js
+### /latest/ui/input_data/main.js
 - a complement of index.html to increase functionalities
-### /latest/ui/imgs
+### /latest/ui/input_data/imgs
+- images to feed the user interface
+
+### /latest/ui/read_data/
+- the app to display previously inputed data
+### /latest/ui/read_data/app.py
+- a webserver to retrieve db data
+### /latest/ui/read_data/index.html
+- user interfce to read previous incidents
+### /latest/ui/read_data/static/imgs
 - images to feed the user interface
 
 ### /latest/test_audio_files/
@@ -126,6 +139,6 @@ We use the database to store the information gathered in the whole process.
 - get a download link for each audio and add it on db and get it displsyed
 - combine .py servers
 
-
+# Usefull db querries:
 SELECT * FROM "public"."new_database" LIMIT 1000;
 DELETE FROM new_database;
