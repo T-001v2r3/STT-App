@@ -49,7 +49,8 @@ def generate_summary_and_save_to_db(report, filename):
 	print("Start generate summary and save to db")
 	print(f"Report: {report}")
 	print(f"Filename: {filename}")
-	with open("prompt.txt", "r", encoding='utf-8') as prompt_file:
+	#with open("prompt.txt", "r", encoding='utf-8') as prompt_file:
+	with open("prompt.txt", "r") as prompt_file:
 		prompt = prompt_file.read()
 	prompt += f" {report}\n output:"
 
@@ -96,6 +97,7 @@ def start_speech_process(audio_data, filename):
 	config = speech.RecognitionConfig(
 		#encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,    
 		#sample_rate_hertz=16000,
+		#language_code="pt-PT",
 		language_code="en",
 		enable_automatic_punctuation=True,
 		enable_word_time_offsets=True,

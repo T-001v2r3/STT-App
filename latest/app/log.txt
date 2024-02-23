@@ -1867,3 +1867,283 @@ UnboundLocalError: cannot access local variable 'answer' where it is not associa
 02/23/2024 11:41:04 AM [33mPress CTRL+C to quit[0m
 02/23/2024 11:41:38 AM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
 02/23/2024 11:41:42 AM 127.0.0.1 - - [23/Feb/2024 11:41:42] "POST /upload HTTP/1.1" 200 -
+02/23/2024 12:12:45 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:12:45 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/23/2024 12:12:45 PM [33mPress CTRL+C to quit[0m
+02/23/2024 12:12:57 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:13:01 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:13:01 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/23/2024 12:13:01 PM [33mPress CTRL+C to quit[0m
+02/23/2024 12:13:53 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:14:07 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 304, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 297, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 72, in generate_summary_and_save_to_db
+    output_alertdata_to_db(filename, answer)
+                                     ^^^^^^
+UnboundLocalError: cannot access local variable 'answer' where it is not associated with a value
+02/23/2024 12:14:07 PM 127.0.0.1 - - [23/Feb/2024 12:14:07] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/23/2024 12:15:19 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:15:19 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/23/2024 12:15:19 PM [33mPress CTRL+C to quit[0m
+02/23/2024 12:15:28 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:15:34 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 304, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 297, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 72, in generate_summary_and_save_to_db
+    output_alertdata_to_db(filename, answer)
+                                     ^^^^^^
+UnboundLocalError: cannot access local variable 'answer' where it is not associated with a value
+02/23/2024 12:15:34 PM 127.0.0.1 - - [23/Feb/2024 12:15:34] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/23/2024 12:16:12 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:16:14 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 304, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 297, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 72, in generate_summary_and_save_to_db
+    output_alertdata_to_db(filename, answer)
+                                     ^^^^^^
+UnboundLocalError: cannot access local variable 'answer' where it is not associated with a value
+02/23/2024 12:16:14 PM 127.0.0.1 - - [23/Feb/2024 12:16:14] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/23/2024 12:17:23 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:17:23 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/23/2024 12:17:23 PM [33mPress CTRL+C to quit[0m
+02/23/2024 12:17:29 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:17:29 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:17:30 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:17:32 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 304, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 297, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 72, in generate_summary_and_save_to_db
+    output_alertdata_to_db(filename, answer)
+                                     ^^^^^^
+UnboundLocalError: cannot access local variable 'answer' where it is not associated with a value
+02/23/2024 12:17:32 PM 127.0.0.1 - - [23/Feb/2024 12:17:32] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/23/2024 12:17:32 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 304, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 297, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 72, in generate_summary_and_save_to_db
+    output_alertdata_to_db(filename, answer)
+                                     ^^^^^^
+UnboundLocalError: cannot access local variable 'answer' where it is not associated with a value
+02/23/2024 12:17:32 PM 127.0.0.1 - - [23/Feb/2024 12:17:32] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/23/2024 12:17:32 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 304, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 297, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 72, in generate_summary_and_save_to_db
+    output_alertdata_to_db(filename, answer)
+                                     ^^^^^^
+UnboundLocalError: cannot access local variable 'answer' where it is not associated with a value
+02/23/2024 12:17:32 PM 127.0.0.1 - - [23/Feb/2024 12:17:32] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/23/2024 12:19:47 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:19:47 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/23/2024 12:19:47 PM [33mPress CTRL+C to quit[0m
+02/23/2024 12:19:54 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:19:57 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 304, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 297, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 72, in generate_summary_and_save_to_db
+    output_alertdata_to_db(filename, answer)
+                                     ^^^^^^
+UnboundLocalError: cannot access local variable 'answer' where it is not associated with a value
+02/23/2024 12:19:57 PM 127.0.0.1 - - [23/Feb/2024 12:19:57] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/23/2024 12:29:11 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:29:11 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/23/2024 12:29:11 PM [33mPress CTRL+C to quit[0m
+02/23/2024 12:29:47 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:29:52 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 305, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 298, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 73, in generate_summary_and_save_to_db
+    output_alertdata_to_db(filename, answer)
+                                     ^^^^^^
+UnboundLocalError: cannot access local variable 'answer' where it is not associated with a value
+02/23/2024 12:29:52 PM 127.0.0.1 - - [23/Feb/2024 12:29:52] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/23/2024 12:29:52 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:29:55 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 305, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 298, in upload
+    generate_summary_and_save_to_db(audio_on_text, filename)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 73, in generate_summary_and_save_to_db
+    output_alertdata_to_db(filename, answer)
+                                     ^^^^^^
+UnboundLocalError: cannot access local variable 'answer' where it is not associated with a value
+02/23/2024 12:29:55 PM 127.0.0.1 - - [23/Feb/2024 12:29:55] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/23/2024 12:31:01 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:31:01 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/23/2024 12:31:01 PM [33mPress CTRL+C to quit[0m
+02/23/2024 12:31:28 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:31:28 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/23/2024 12:31:28 PM [33mPress CTRL+C to quit[0m
+02/23/2024 12:31:52 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:31:52 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 12:31:55 PM 127.0.0.1 - - [23/Feb/2024 12:31:55] "POST /upload HTTP/1.1" 200 -
+02/23/2024 12:31:55 PM 127.0.0.1 - - [23/Feb/2024 12:31:55] "POST /upload HTTP/1.1" 200 -
