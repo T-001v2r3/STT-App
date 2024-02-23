@@ -289,7 +289,7 @@ def upload(data, content_type, worker_number):
 	bucket = client.bucket('ba-report-bucket')
 	blob = bucket.blob(filename)
 	blob.upload_from_string(data, content_type=content_type)
-	create_db_entry(filename, datetime.now(), f"'worker_number': 65'{worker_number}'")
+	create_db_entry(filename, datetime.now(), f"'worker_number': '{worker_number}'")
 	print("send data to speech to text")
 	audio_on_text = start_speech_process(data, filename)
 	print("send data to generate summary")

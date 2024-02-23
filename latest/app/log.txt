@@ -2535,3 +2535,167 @@ Traceback (most recent call last):
                                      ^^^^^^
 UnboundLocalError: cannot access local variable 'answer' where it is not associated with a value
 02/23/2024 01:43:36 PM 127.0.0.1 - - [23/Feb/2024 13:43:36] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/23/2024 06:54:11 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 06:54:11 PM [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+02/23/2024 06:54:11 PM [33mPress CTRL+C to quit[0m
+02/23/2024 06:54:20 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 06:54:22 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 06:54:22 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 06:54:22 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 304, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 294, in upload
+    audio_on_text = start_speech_process(data, filename)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 110, in start_speech_process
+    response = speech_to_text(config, audio)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 124, in speech_to_text
+    response = client.recognize(config=config, audio=audio)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/cloud/speech_v1/services/speech/client.py", line 801, in recognize
+    response = rpc(
+               ^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/timeout.py", line 120, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 Invalid recognition 'config': bad encoding..
+02/23/2024 06:54:22 PM 127.0.0.1 - - [23/Feb/2024 18:54:22] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/23/2024 06:54:23 PM 127.0.0.1 - - [23/Feb/2024 18:54:23] "POST /upload HTTP/1.1" 200 -
+02/23/2024 06:54:24 PM 127.0.0.1 - - [23/Feb/2024 18:54:24] "POST /upload HTTP/1.1" 200 -
+02/23/2024 06:55:06 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 06:55:06 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 304, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 294, in upload
+    audio_on_text = start_speech_process(data, filename)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 110, in start_speech_process
+    response = speech_to_text(config, audio)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 124, in speech_to_text
+    response = client.recognize(config=config, audio=audio)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/cloud/speech_v1/services/speech/client.py", line 801, in recognize
+    response = rpc(
+               ^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/timeout.py", line 120, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 Invalid recognition 'config': bad encoding..
+02/23/2024 06:55:06 PM 127.0.0.1 - - [23/Feb/2024 18:55:06] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+02/23/2024 06:55:50 PM No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+02/23/2024 06:55:51 PM Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 304, in upload_form
+    upload(file.read(), file.content_type, worker_number)
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 294, in upload
+    audio_on_text = start_speech_process(data, filename)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 110, in start_speech_process
+    response = speech_to_text(config, audio)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/Desktop/STT-App/latest/app/main.py", line 124, in speech_to_text
+    response = client.recognize(config=config, audio=audio)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/cloud/speech_v1/services/speech/client.py", line 801, in recognize
+    response = rpc(
+               ^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/timeout.py", line 120, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fullname/.local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 Invalid recognition 'config': bad encoding..
+02/23/2024 06:55:51 PM 127.0.0.1 - - [23/Feb/2024 18:55:51] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
