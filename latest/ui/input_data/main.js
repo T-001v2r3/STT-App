@@ -19,15 +19,15 @@ function enviarAudioParaServidor(blob) {
         method: 'POST',
         body: formData
     })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to send audio file to the backend');
-            }
-            console.log('Audio file sent successfully to the backend');
-        })
-        .catch(error => {
-            console.error('Error while sending audio file to the server:', error);
-        });
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to send audio file to the backend');
+        }
+        console.log('Audio file sent successfully to the backend');
+    })
+    .catch(error => {
+        console.error('Error while sending audio file to the server:', error);
+    });
 }
 
 // Manipulador do evento de clique do botão "recordButton"

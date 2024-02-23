@@ -111,21 +111,4 @@ Summary: ```json
 }
 ```
 
-
-Provide a summary with about two sentences for the following article: no início do turno a por volta das 3:20 da madrugada da linha Ave 901 à máquina BTS travou Devido a um problema com as mangueiras assentamento medições em substituindo as mangueiras e retomamos a produção
-Summary:  \"time\": \"03:20\",
-  \"shift\": \"A\",
-  \"incident\": \"A máquina BTC travou devido a um problema com as mangueiras\",
-  \"resolution\": \"Substituição das mangueiras\",
-  \"interruption\": \"Paragem de máquina\",
-  \"location\": \"AV901\"
-
-Provide a summary with about two sentences for the following article: volta das 7:30 da noite o turno B na secção AVC 5476 e mochila do btc apresentava excesso temperatura a 3 dias Realizamos uma purga do circo de arte do arrefecimento e monitoramos a temperatura de perto
-Summary: {
-  \"time\": \"19:30\",
-  \"shift\": \"B\",
-  \"incident\": \\\"Excesso de temperatura no chiller do BTC\\\",
-  \\\"resolution\\\": \\\"Purga do circuito de ar de arrefecimento\\\",
-  \\\"interruption\\\": \\\"Não\\\",
-  \\\"location\\\": \\\"AV547C\\\"
-}
+input:
