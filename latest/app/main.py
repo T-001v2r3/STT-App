@@ -49,8 +49,8 @@ def generate_summary_and_save_to_db(report, filename):
 	print("Start generate summary and save to db")
 	print(f"Report: {report}")
 	print(f"Filename: {filename}")
-	#with open("prompt.txt", "r", encoding='utf-8') as prompt_file:
-	with open("prompt.txt", "r") as prompt_file:
+	with open("prompt.txt", "r", encoding='utf-8') as prompt_file:
+	#with open("prompt.txt", "r") as prompt_file:
 		prompt = prompt_file.read()
 	prompt += f" {report}\n output:"
 
@@ -59,18 +59,86 @@ def generate_summary_and_save_to_db(report, filename):
 	print(f"Parameters: {parameters}")
 	response = model.predict(prompt, **parameters)
 	print(f"Response from Model: {response.text}")
-	try:
-		response_json = response.text
-		response_json = response_json.replace("```json", "").replace("```", "").strip()
-		response_json = json.loads(response_json)
-		answer = response_json["answer"]
-		if isinstance(answer, list) and all(isinstance(i, list) for i in answer):
-			answer = ' '.join(''.join(i) for i in answer)
-		print(f"Answer: {answer}")
-	except Exception as e:
-		print(f"Error: {e}")
+	#try:
+	#	response_json = response.text
+	#	response_json = response_json.replace("```json", "").replace("```", "").strip()
+	#	response_json = json.loads(response_json)
+	#	answer = response_json["answer"]
+	#	if isinstance(answer, list) and all(isinstance(i, list) for i in answer):
+	#		answer = ' '.join(''.join(i) for i in answer)
+	#	print(f"Answer: {answer}")
+	#except Exception as e:
+	#	print(f"Error: {e}")
 	# send reponse to db
-	output_alertdata_to_db(filename, answer)
+	converted = convert_to_json(response.text)
+	print("Output to db: ", converted)
+	output_alertdata_to_db(filename, convert_to_json(response.text))
+
+def convert_to_json(input_list):
+    # Joining the list elements to form a single string
+    input_str = ''.join(input_list)
+
+    # Extracting the JSON string between the curly braces
+    start_index = input_str.find('{')
+    end_index = input_str.rfind('}')
+    json_str = input_str[start_index:end_index + 1]
+
+    # Removing unnecessary backslashes
+    json_str = json_str.replace('\\', '')
+
+    # Using json.loads to convert the string to a JSON object
+    json_obj = json.loads(json_str)
+
+    # Converting to a list of key-value pairs
+    key_value_list = [{"key": key, "value": value} for key, value in json_obj.items()]
+
+    return key_value_list
+
+#def convert_to_json(input_list):
+#    # Joining the list elements to form a single string
+#    input_str = ''.join(input_list)
+#
+#    # Extracting the JSON string between the curly braces
+#    start_index = input_str.find('{')
+#    end_index = input_str.rfind('}')
+#    json_str = input_str[start_index:end_index + 1]
+#
+#    # Removing unnecessary backslashes
+#    json_str = json_str.replace('\\', '')
+#
+#    # Using json.loads to convert the string to a JSON object
+#    json_obj = json.loads(json_str)
+#
+#    return json_obj
+
+def parse_alertmetadata(alertmetadata):
+    joined_string = ''.join(alertmetadata)
+    
+    try:
+        # Attempt to parse the string as JSON
+        json_data = json.loads(joined_string)
+        return json_data
+    except json.JSONDecodeError as e:
+        # Handle the case where the string is not valid JSON
+        print(f"Error decoding JSON: {e}")
+        return None
+	
+#def parse_alertmetadata(alertmetadata):
+#    # Join the list of characters into a single string
+#    joined_string = ''.join(alertmetadata)
+#    
+#    # Remove backslashes and quotes around individual characters
+#    cleaned_string = joined_string.replace('\\"', '').replace('\\', '').replace('`', '')
+#
+#    # Load the cleaned string as JSON
+#    json_data = json.loads(cleaned_string)
+#
+#    return json_data
+
+#def parse_alertmetadata(alertmetadata):
+#    joined_string = ''.join(alertmetadata)
+#    formatted_string = joined_string.replace('\\\\', '\\').replace('\\"', '"').replace('\n', '').replace(' ', '').replace('`', '')
+#    return formatted_string
 
 ##################################################################
 ###################### Speech to Text ############################
@@ -95,8 +163,8 @@ def start_speech_process(audio_data, filename):
 	print("Start speech to text process")
 	# Now you can use args.var to access the value of the argument
 	config = speech.RecognitionConfig(
-		#language_code="pt-PT",
-		language_code="en",
+		language_code="pt-PT",
+		#language_code="en",
 		enable_automatic_punctuation=True,
 		enable_word_time_offsets=True,
 	)
