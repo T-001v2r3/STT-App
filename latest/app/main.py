@@ -95,8 +95,6 @@ def start_speech_process(audio_data, filename):
 	print("Start speech to text process")
 	# Now you can use args.var to access the value of the argument
 	config = speech.RecognitionConfig(
-		#encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,    
-		#sample_rate_hertz=16000,
 		#language_code="pt-PT",
 		language_code="en",
 		enable_automatic_punctuation=True,
